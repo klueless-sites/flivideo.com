@@ -1,0 +1,86 @@
+---
+import '~/styles/base.css';
+
+import { SITE } from '~/lib/config';
+import sitemap from '~/lib/sitemap/root';
+import AppContext from '~/lib/app_context';
+
+const context = new AppContext(sitemap());
+
+// import { basePagePath, pageSubpath, topicNavigationPath, topicNavigation } from '~/lib/util';
+import { topicNavigation } from '~/lib/util';
+
+import Head from '~/layouts/Head.astro';
+import Hero from '~/components/Hero.astro';
+import Header from '~/components/header/Header.astro';
+import Main from '~/components/main/Main.astro';
+
+export interface Props {
+  title: string;
+  pageTitle: string;
+  description: string;
+  image?: string;
+  next?: string;
+  prev?: string;
+  canonicalURL?: string;
+  font_awesome?: boolean;
+  site_map?: boolean;
+  rss_feed?: boolean;
+  hero?: boolean;
+}
+
+const { 
+  title = Astro.props.content.title || SITE.title,
+  pageTitle = Astro.props.content.pageTitle || Astro.props.content.title || SITE.title,
+  description = Astro.props.content.description || SITE.description,
+  image,
+  next,
+  prev,
+  canonicalURL = Astro.url,
+  font_awesome = SITE.font_awesome,
+  site_map = SITE.site_map,
+  rss_feed = SITE.rss_feed,
+  hero = Astro.props.content.hero || false,
+} = Astro.props as Props;
+
+interface PageFrontmatter {
+  file: string;
+  title: string;
+  pageId?: string;
+}
+
+// import PageData from '~/lib/page_data';
+
+// const pageData = new PageData();
+
+// const pages = pageData.buildData(await Astro.glob('../pages/**/*.md*'));
+// const pages2 = await pageData.buildDataViaPath('../pages/**/*.md*', Astro);
+
+// console.log(...pages);
+const navigation = await topicNavigation(Astro.props);
+// console.log(JSON.stringify(navigation, null, 2));
+// console.log('-----------------------B:', Astro.props.content.file)
+// console.log('pageSubpath()           :', pageSubpath(Astro.props.content.file) === '' ? '*' : pageSubpath(Astro.props.content.file));
+// console.log('basePagePath()          :', basePagePath());
+// console.log('topicNavigationPath     :', topicNavigationPath(Astro.props.content.file));
+// console.log('-----------------------E:', Astro.props.content.file);
+---
+
+<!DOCTYPE html>
+<html lang="en" class='scroll-smooth'>
+<Head 
+  title={pageTitle}
+  description={description}
+  canonicalURL={canonicalURL}
+  font_awesome={font_awesome}
+  site_map={site_map}
+  rss_feed={rss_feed} />
+
+<body class="bg-white dark:bg-slate-900">
+  <Header />
+  {hero && (<Hero />)}
+  <Main title={title} headings={Astro.props.headings} navigation={navigation} context={context}>
+    <slot />
+  </Main>  
+</body>
+</html>

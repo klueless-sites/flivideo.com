@@ -1,0 +1,13 @@
+---
+export interface Props {
+  section: Section;
+  kite: string;
+}
+
+const { section, kite = 'lock' } = Astro.props as Props;
+
+---
+
+kiteS are good: {section} {kite}
+
+<slot />

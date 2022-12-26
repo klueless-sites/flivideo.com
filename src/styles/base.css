@@ -1,0 +1,50 @@
+@import './fonts.css';
+
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.debug, {
+  @apply border-2 lg:border-4 border-solid md:border-dashed lg:border-double xl:border-dotted 2xl:border-dashed
+}
+.debug-red {
+  @apply border-red-500 debug
+}
+.debug-yellow {
+  @apply border-yellow-500 debug
+}
+.debug-green {
+  @apply border-green-500 debug
+}
+
+
+/* .transition-fade {
+  transition: 0.2s;
+  opacity: 1;
+  animation: 0.5s slidein-right;
+} */
+
+/* html.is-animating .transition-fade {
+  opacity: 0;
+} */
+/* html.is-leaving .transition-fade p {
+  font-weight: bold;
+} */
+/* html.is-leaving .transition-fade {
+  transition: 0.2s;
+  opacity: 0;
+} */
+
+/* .transition-fade {
+  transition: 1s;
+  opacity: 1;
+}
+html.is-animating .transition-fade {
+  opacity: 0;
+} */
+/* 
+html.is-leaving .transition-fade {
+  opacity: 0;
+  transition: 2s;
+} */

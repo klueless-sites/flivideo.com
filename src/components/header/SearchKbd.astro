@@ -1,0 +1,11 @@
+---
+// This needs to be done client side
+// /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform) ? '⌘' : 'Ctrl '
+let modifierKey: string = '⌘';
+---
+{modifierKey && (
+  <kbd class="ml-auto hidden font-medium text-slate-400 dark:text-slate-500 md:block">
+    <kbd class="font-sans">{modifierKey}</kbd>
+    <kbd class="font-sans">K</kbd>
+  </kbd>
+)}

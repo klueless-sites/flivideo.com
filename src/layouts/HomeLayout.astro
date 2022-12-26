@@ -1,0 +1,206 @@
+---
+import '~/styles/base.css';
+
+import { SITE } from '~/lib/config';
+
+import Head from '~/layouts/Head.astro';
+
+export interface Props {
+  title: string;
+  pageTitle: string;
+  description: string;
+  canonicalURL?: string;
+  font_awesome?: boolean;
+  site_map?: boolean;
+  rss_feed?: boolean;
+}
+
+const { 
+  title = Astro.props.content.title || SITE.title,
+  pageTitle = Astro.props.content.pageTitle || Astro.props.content.title || SITE.title,
+  description = Astro.props.content.description || SITE.description,
+  canonicalURL = Astro.url,
+  font_awesome = SITE.font_awesome,
+  site_map = SITE.site_map,
+  rss_feed = SITE.rss_feed,
+} = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class='scroll-smooth'>
+<Head 
+  title={pageTitle}
+  description={description}
+  canonicalURL={canonicalURL}
+  font_awesome={font_awesome}
+  site_map={site_map}
+  rss_feed={rss_feed} />
+
+<body>
+  <div>
+    <div class="relative h-96">
+      <div class="absolute inset-0">
+        <img class="h-full w-full object-cover" src="images/bg_head.jpeg" alt="">
+      </div>
+      <div class="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">{title}</h1>
+        <p class="mt-6 max-w-3xl text-xl text-gray-200">Software Architect, Fullstack / Micro App Developer and Dancer</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+  Create a Tailwind CSS component of a navigation bar three menu items. The menu should be centered horizontally, there should not be any graphics, the text should be dark grey and very large, the text should be capitablized and there should be padding above and below the text.
+
+  [insert]
+  </section>
+  -->
+
+  <section class="text-center p-4">
+    <div class="container mx-auto">
+        <div class="flex justify-center">
+            <div class="w-1/3 text-gray-800 text-2xl">
+                <a href="#">Home</a>
+            </div>
+            <div class="w-1/3 text-gray-800 text-2xl">
+                <a href="#">About</a>
+            </div>
+            <div class="w-1/3 text-gray-800 text-2xl">
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <ul class="list-reset">
+            <li class="inline-block px-4 py-2 text-2xl">Home</li>
+            <li class="inline-block px-4 py-2 text-2xl">About</li>
+            <li class="inline-block px-4 py-2 text-2xl">Contact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+  <section class="text-center">
+    <div class="container">
+      <div class="flex justify-center">
+        <div class="p-4">
+          <a href="#" class="text-gray-800 text-3xl uppercase">Home</a>
+        </div>
+        <div class="p-4">
+          <a href="#" class="text-gray-800 text-3xl uppercase">About</a>
+        </div>
+        <div class="p-4">
+          <a href="#" class="text-gray-800 text-3xl uppercase">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+  Create a Tailwind CSS component of a pricing chart with three cards representing three plans.
+
+  The first plan is a hobby plan worth $69 per month with 3 features.
+
+  The 2nd plan is the small business plan worth $99 per month with 7 features.
+
+  The third plan is for enterprises worth $169 per month with 12 features.
+
+  The small business plan should be highlighted
+  -->
+
+  <section class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between">
+        <div class="w-full md:w-1/3 px-4">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-2xl font-bold text-gray-800 text-center">Hobby</h3>
+                <div class="my-4">
+                    <p class="text-gray-600 text-center">$69</p>
+                    <p class="text-gray-600 text-center">per month</p>
+                </div>
+                <ul>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 1</p>
+                    </li>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 2</p>
+                    </li>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 3</p>
+                    </li>
+                </ul>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6">
+                    Choose Plan
+                </button>
+            </div>
+        </div>
+        <div class="w-full md:w-1/3 px-4">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-2xl font-bold text-gray-800 text-center">Small Business</h3>
+                <div class="my-4">
+                    <p class="text-gray-600 text-center">$99</p>
+                    <p class="text-gray-600 text-center">per month</p>
+                </div>
+                <ul>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 1</p>
+                    </li>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 2</p>
+                    </li>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 3</p>
+                    </li>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 4</p>
+                    </li>
+                </ul>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6">
+                    Choose Plan
+                </button>
+            </div>
+        </div>
+        <div class="w-full md:w-1/3 px-4">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-2xl font-bold text-gray-800 text-center">Enterprise</h3>
+                <div class="my-4">
+                    <p class="text-gray-600 text-center">$169</p>
+                    <p class="text-gray-600 text-center">per month</p>
+                </div>
+                <ul>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 1</p>
+                    </li>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 2</p>
+                    </li>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 3</p>
+                    </li>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 4</p>
+                    </li>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 5</p>
+                    </li>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 6</p>
+                    </li>
+                    <li class="py-2">
+                        <p class="text-gray-600 text-sm">Feature 7</p>
+                    </li>
+                </ul>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6">
+                    Choose Plan
+                </button>
+            </div>
+        </div>
+    </div>
+  </section>
+</body>
+</html>
