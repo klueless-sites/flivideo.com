@@ -6,4 +6,4 @@ description: Automate your video influence
 hero: true
 ---
 
-I love building development tools, libraries, microapps and services
+
