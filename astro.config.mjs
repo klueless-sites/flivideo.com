@@ -1,17 +1,18 @@
 import { defineConfig } from 'astro/config';
-
-// https://astro.build/config
-import tailwind from "@astrojs/tailwind";
-
-// https://astro.build/config
 import mdx from "@astrojs/mdx";
+import tailwind from "@astrojs/tailwind";
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
-  server: { port: 3003 },
+  server: {
+    port: 3003
+  },
   integrations: [tailwind({
     config: {
       applyBaseStyles: false
     }
-  }), mdx()]
+  }), mdx()],
+  output: "server",
+  adapter: netlify()
 });
