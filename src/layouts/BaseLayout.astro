@@ -7,8 +7,8 @@ import AppContext from '~/lib/app_context';
 
 const context = new AppContext(sitemap());
 
-// import { basePagePath, pageSubpath, topicNavigationPath, topicNavigation } from '~/lib/util';
-import { topicNavigation } from '~/lib/util';
+import { basePagePath, pageSubpath, topicNavigationPath, topicNavigation } from '~/lib/util';
+// import { topicNavigation } from '~/lib/util';
 
 import Head from '~/layouts/Head.astro';
 import Hero from '~/components/Hero.astro';
@@ -59,11 +59,11 @@ interface PageFrontmatter {
 // console.log(...pages);
 const navigation = await topicNavigation(Astro.props);
 // console.log(JSON.stringify(navigation, null, 2));
-// console.log('-----------------------B:', Astro.props.content.file)
-// console.log('pageSubpath()           :', pageSubpath(Astro.props.content.file) === '' ? '*' : pageSubpath(Astro.props.content.file));
-// console.log('basePagePath()          :', basePagePath());
-// console.log('topicNavigationPath     :', topicNavigationPath(Astro.props.content.file));
-// console.log('-----------------------E:', Astro.props.content.file);
+console.log('-----------------------B:', Astro.props.content.file)
+console.log('pageSubpath()           :', pageSubpath(Astro.props.content.file) === '' ? '*' : pageSubpath(Astro.props.content.file));
+console.log('basePagePath()          :', basePagePath());
+console.log('topicNavigationPath     :', topicNavigationPath(Astro.props.content.file));
+console.log('-----------------------E:', Astro.props.content.file);
 ---
 
 <!DOCTYPE html>

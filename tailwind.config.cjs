@@ -28,6 +28,12 @@ module.exports = {
       maxWidth: {
         '8xl': '88rem',
       },
+      colors: {
+        fli: {
+          100: '#9CF4E7',
+          200: '#09AFB1',
+        }
+      },
     },
   },
   plugins: [

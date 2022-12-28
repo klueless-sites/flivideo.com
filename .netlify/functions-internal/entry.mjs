@@ -1615,6 +1615,17 @@ async function* maybeRenderHead(result) {
 
 typeof process === "object" && Object.prototype.toString.call(process) === "[object process]";
 
+function __astro_tag_component__(Component, rendererName) {
+  if (!Component)
+    return;
+  if (typeof Component !== "function")
+    return;
+  Object.defineProperty(Component, Renderer, {
+    value: rendererName,
+    enumerable: false,
+    writable: false
+  });
+}
 function spreadAttributes(values, _name, { class: scopedClassName } = {}) {
   let output = "";
   if (scopedClassName) {
@@ -1739,6 +1750,204 @@ var server_default = {
   renderToStaticMarkup
 };
 
+const MDXLayout = async function ({
+  children
+}) {
+  const Layout = (await Promise.resolve().then(() => BaseLayout)).default;
+  const {
+    layout,
+    ...content
+  } = frontmatter$3;
+  content.file = file$3;
+  content.url = url$3;
+  content.astro = {};
+  Object.defineProperty(content.astro, "headings", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."');
+    }
+  });
+  Object.defineProperty(content.astro, "html", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."');
+    }
+  });
+  Object.defineProperty(content.astro, "source", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."');
+    }
+  });
+  return createVNode(Layout, {
+    file: file$3,
+    url: url$3,
+    content,
+    frontmatter: content,
+    headings: getHeadings$3(),
+    "server:root": true,
+    children
+  });
+};
+const frontmatter$3 = {
+  "layout": "~/layouts/BaseLayout.astro",
+  "title": "FliVideo",
+  "pageTitle": "Home | FliVideo",
+  "description": "Automate your video influence",
+  "hero": true
+};
+const _internal$3 = {
+  injectedFrontmatter: {}
+};
+function getHeadings$3() {
+  return [{
+    "depth": 2,
+    "slug": "automate-your-youtube-influence",
+    "text": "Automate your Youtube influence"
+  }, {
+    "depth": 2,
+    "slug": "why-have-i-created-flivideo",
+    "text": "Why have I created FliVideo?"
+  }, {
+    "depth": 2,
+    "slug": "what-is-flivideo",
+    "text": "What is FliVideo?"
+  }, {
+    "depth": 3,
+    "slug": "learn-to-automate-your-video-influence",
+    "text": "Learn to automate your video influence"
+  }, {
+    "depth": 3,
+    "slug": "systems",
+    "text": "Systems"
+  }, {
+    "depth": 3,
+    "slug": "techniques",
+    "text": "Techniques"
+  }, {
+    "depth": 3,
+    "slug": "software-automation-using-code-macros-and-apis",
+    "text": "Software automation using code, macros and API\u2019s"
+  }, {
+    "depth": 2,
+    "slug": "a-little-about-me",
+    "text": "A little about me"
+  }];
+}
+function _createMdxContent(props) {
+  const _components = Object.assign({
+    h2: "h2",
+    p: "p",
+    a: "a",
+    h3: "h3",
+    ul: "ul",
+    li: "li"
+  }, props.components);
+  return createVNode(Fragment, {
+    children: [createVNode(_components.h2, {
+      id: "automate-your-youtube-influence",
+      children: "Automate your Youtube influence"
+    }), "\n", createVNode(_components.p, {
+      children: ["Hi, I\u2019m David from ", createVNode(_components.a, {
+        href: "https://flivideo.com",
+        children: "FliVideo"
+      }), " and I\u2019m here to help you automate your video influence."]
+    }), "\n", createVNode("img", {
+      class: "p-1 w-32 h-32 rounded-full ring-2 ring-fli-200 dark:ring-fli-100",
+      src: "images/david.png",
+      alt: "David Cruwys"
+    }), "\n", createVNode(_components.h2, {
+      id: "why-have-i-created-flivideo",
+      children: "Why have I created FliVideo?"
+    }), "\n", createVNode(_components.p, {
+      children: "I have a need to be efficient, productive and professional my own video and content production as a Youtube influencer."
+    }), "\n", createVNode(_components.p, {
+      children: "In meeting that need I have had to find ways to automate my processes for creating content, recording professional videos and reaching my target audience."
+    }), "\n", createVNode(_components.p, {
+      children: [createVNode(_components.a, {
+        href: "https://flivideo.com",
+        children: "FliVideo"
+      }), " was created to help me systematize and automate my own video influence."]
+    }), "\n", createVNode(_components.h2, {
+      id: "what-is-flivideo",
+      children: "What is FliVideo?"
+    }), "\n", createVNode(_components.p, {
+      children: "FliVideo is where I gather knowledge on the tools, systems and automation\u2019s that you could implement to create your own Youtube content and influence."
+    }), "\n", createVNode(_components.h3, {
+      id: "learn-to-automate-your-video-influence",
+      children: "Learn to automate your video influence"
+    }), "\n", createVNode(_components.ul, {
+      children: ["\n", createVNode(_components.li, {
+        children: "Create videos quickly"
+      }), "\n", createVNode(_components.li, {
+        children: "Develop graphics and thumbnails"
+      }), "\n", createVNode(_components.li, {
+        children: "Using AI to write headlines, scripts and descriptions"
+      }), "\n", createVNode(_components.li, {
+        children: "Using AI to create thumbnails"
+      }), "\n"]
+    }), "\n", createVNode(_components.h3, {
+      id: "systems",
+      children: "Systems"
+    }), "\n", createVNode(_components.ul, {
+      children: ["\n", createVNode(_components.li, {
+        children: "The workflows I use to create multiple shorts per day"
+      }), "\n"]
+    }), "\n", createVNode(_components.h3, {
+      id: "techniques",
+      children: "Techniques"
+    }), "\n", createVNode(_components.h3, {
+      id: "software-automation-using-code-macros-and-apis",
+      children: "Software automation using code, macros and API\u2019s"
+    }), "\n", createVNode(_components.ul, {
+      children: ["\n", createVNode(_components.li, {
+        children: "Tools for creating videos"
+      }), "\n"]
+    }), "\n", createVNode(_components.h2, {
+      id: "a-little-about-me",
+      children: "A little about me"
+    }), "\n", createVNode(_components.p, {
+      children: "I love software development and I love video based learning, content and marketing."
+    }), "\n", createVNode(_components.p, {
+      children: "I got my first computer in 1982 (Texas Instruments TI99/4A) and I wrote my first program by copying code out of a subscription magazine when I was 10."
+    }), "\n", createVNode(_components.p, {
+      children: "I have been a professional software developer for 30+ years and dabbled in SEO, content and video marketing for the last 15 years."
+    }), "\n", createVNode("img", {
+      class: "p-1 w-64 h-64 rounded-full ring-2 ring-fli-200",
+      src: "images/david.png",
+      alt: "David Cruwys"
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  return createVNode(MDXLayout, {
+    ...props,
+    children: createVNode(_createMdxContent, {
+      ...props
+    })
+  });
+}
+
+__astro_tag_component__(getHeadings$3, "astro:jsx");
+__astro_tag_component__(MDXContent, "astro:jsx");
+const url$3 = "";
+const file$3 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/index.mdx";
+function rawContent$3() { throw new Error("MDX does not support rawContent()! If you need to read the Markdown contents to calculate values (ex. reading time), we suggest injecting frontmatter via remark plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }function compiledContent$3() { throw new Error("MDX does not support compiledContent()! If you need to read the HTML contents to calculate values (ex. reading time), we suggest injecting frontmatter via rehype plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }const Content$3 = (props = {}) => MDXContent({
+											...props,
+											components: { Fragment, ...props.components },
+										});
+Content$3[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter$3.layout);
+
+const _page0 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  frontmatter: frontmatter$3,
+  _internal: _internal$3,
+  getHeadings: getHeadings$3,
+  url: url$3,
+  file: file$3,
+  rawContent: rawContent$3,
+  compiledContent: compiledContent$3,
+  Content: Content$3,
+  default: Content$3
+}, Symbol.toStringTag, { value: 'Module' }));
+
 const SITE = {
   title: "FliVideo",
   description: "Automate your video influence",
@@ -1791,7 +2000,7 @@ function pageSubpath(file) {
   return path.dirname(file).substring(basePagePath().length);
 }
 function basePagePath() {
-  return "/Users/davidcruwys/dev/sites/appydave-v2.com/src/pages/";
+  return new URL("../pages/", import.meta.url).pathname;
 }
 
 class Link {
@@ -1904,18 +2113,18 @@ const $$Hero = createComponent(async ($$result, $$props, $$slots) => {
     <div class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 px-4 lg:max-w-8xl lg:grid-cols-2 lg:px-8 xl:gap-x-16 xl:px-12">
       <div class="relative z-10 md:text-center lg:text-left">
         <div class="relative">
-          <p class="inline bg-gradient-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
+          <p class="inline bg-gradient-to-r from-fli-100 via-fli-200 to-fli-100 bg-clip-text font-display text-5xl tracking-tight text-transparent">
             Automate your influence
           </p>
-          <p class="mt-3 text-2xl tracking-tight text-slate-400">
+          <p class="mt-3 text-2xl tracking-tight text-gray-300">
             Learn how to systemetise adn automate your video influence. Create more content, reach more people, and grow your business.
           </p>
-          <div class="mt-8 flex gap-4 md:justify-center lg:justify-start">
+          <div class="mt-8 flex gap-4 md:justify-center lg:justify-start text-fli-100">
             <button href="/">
               Get started
             </button>
             <button href="/" variant="secondary">
-              View on GitHub
+              View on Youtube
             </button>
           </div>
         </div>
@@ -1961,7 +2170,7 @@ const $$Logo = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$i, $$props, $$slots);
   Astro2.self = $$Logo;
   const { ...props } = Astro2.props;
-  return renderTemplate`${maybeRenderHead($$result)}<img src="/images/logo-fli-video-tagline.svg" alt="Logo"${spreadAttributes(props)}>`;
+  return renderTemplate`${maybeRenderHead($$result)}<img src="/images/logo-fli-video.svg" alt="Logo"${spreadAttributes(props)}>`;
 }, "/Users/davidcruwys/dev/sites/flivideo.com/src/components/header/Logo.astro");
 
 const $$Astro$h = createAstro("/Users/davidcruwys/dev/sites/flivideo.com/src/components/header/LogoIcon.astro", "", "file:///Users/davidcruwys/dev/sites/flivideo.com/");
@@ -2039,8 +2248,8 @@ const $$Header = createComponent(async ($$result, $$props, $$slots) => {
   </div>
   <div class="relative flex flex-grow basis-0 items-center">
     <a href="/" aria-label="Home page">
-      ${renderComponent($$result, "LogoIcon", $$LogoIcon, { "class": "h-24 lg:hidden" })}
       ${renderComponent($$result, "Logo", $$Logo, { "class": "hidden h-24 w-auto fill-slate-700 dark:fill-sky-100 lg:block" })}
+      ${renderComponent($$result, "LogoIcon", $$LogoIcon, { "class": "h-20 lg:hidden" })}
     </a>
   </div>
   <div class="-my-5 mr-6 sm:mr-8 md:mr-0">
@@ -2297,136 +2506,7 @@ const $$Navigation = createComponent(async ($$result, $$props, $$slots) => {
       </ul>
     </nav>
   </div>
-</div> 
-
-
-<!-- <div class="hidden lg:relative lg:block lg:flex-none" xmen='aaaaaaaaaaaaaaaaaaaaaaaaa'>
-  <div class="absolute inset-y-0 right-0 w-[50vw] bg-slate-50 dark:hidden"></div>
-  <div class="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto py-16 pl-0.5">
-    <div class="absolute top-16 bottom-0 right-0 hidden h-12 w-px bg-gradient-to-t from-slate-800 dark:block"></div>
-    <div class="absolute top-28 bottom-0 right-0 hidden w-px bg-slate-800 dark:block"></div>
-    <nav class="text-base lg:text-sm w-64 pr-8 xl:w-72 xl:pr-16">
-      <ul role="list" class="space-y-9">
-        <li>
-          <h2 class="font-display font-medium text-slate-900 dark:text-white">Introduction</h2>
-          <ul
-            role="list"
-            class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200">
-            <li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full font-semibold text-sky-500 before:bg-sky-500"
-                href="/">Getting started</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/installation">Installation</a>
-            </li>
-          </ul>
-        </li><li>
-          <h2 class="font-display font-medium text-slate-900 dark:text-white">Core concepts</h2><ul
-            role="list"
-            class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200"
-          >
-            <li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/understanding-caching">Understanding caching</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/predicting-user-behavior">Predicting user behavior</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/basics-of-time-travel">Basics of time-travel</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/introduction-to-string-theory">Introduction to string theory</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/the-butterfly-effect">The butterfly effect</a>
-            </li>
-          </ul>
-        </li><li>
-          <h2 class="font-display font-medium text-slate-900 dark:text-white">Advanced guides</h2><ul
-            role="list"
-            class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200"
-          >
-            <li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/writing-plugins">Writing plugins</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/neuralink-integration">Neuralink integration</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/temporal-paradoxes">Temporal paradoxes</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/testing">Testing</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/compile-time-caching">Compile-time caching</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/predictive-data-generation">Predictive data generation</a>
-            </li>
-          </ul>
-        </li><li>
-          <h2 class="font-display font-medium text-slate-900 dark:text-white">API reference</h2><ul
-            role="list"
-            class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200"
-          >
-            <li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/cacheadvance-predict">CacheAdvance.predict()</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/cacheadvance-flush">CacheAdvance.flush()</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/cacheadvance-revert">CacheAdvance.revert()</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/cacheadvance-regret">CacheAdvance.regret()</a>
-            </li>
-          </ul>
-        </li><li>
-          <h2 class="font-display font-medium text-slate-900 dark:text-white">Contributing</h2><ul
-            role="list"
-            class="mt-2 space-y-2 border-l-2 border-slate-100 dark:border-slate-800 lg:mt-4 lg:space-y-4 lg:border-slate-200"
-          >
-            <li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/how-to-contribute">How to contribute</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/architecture-guide">Architecture guide</a>
-            </li><li class="relative">
-              <a
-                class="block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-1 before:top-1/2 before:h-1.5 before:w-1.5 before:-translate-y-1/2 before:rounded-full text-slate-500 before:hidden before:bg-slate-300 hover:text-slate-600 hover:before:block dark:text-slate-400 dark:before:bg-slate-700 dark:hover:text-slate-300"
-                href="/docs/design-principles">Design principles</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div> -->`;
+</div>`;
 }, "/Users/davidcruwys/dev/sites/flivideo.com/src/components/main/Navigation.astro");
 
 const $$Astro$2 = createAstro("/Users/davidcruwys/dev/sites/flivideo.com/src/components/main/Main.astro", "", "file:///Users/davidcruwys/dev/sites/flivideo.com/");
@@ -2434,7 +2514,11 @@ const $$Main = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$Main;
   const { title, headings, navigation, context } = Astro2.props;
-  return renderTemplate`${maybeRenderHead($$result)}<div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
+  return renderTemplate`${maybeRenderHead($$result)}<pre><code>
+  ${JSON.stringify(navigation, null, 2)}
+  </code></pre>
+  
+<div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
   <div class="hidden lg:relative lg:block lg:flex-none">
     ${renderComponent($$result, "Navigation", $$Navigation, { "navigation": navigation })}
   </div>
@@ -2473,6 +2557,11 @@ const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
     hero = Astro2.props.content.hero || false
   } = Astro2.props;
   const navigation = await topicNavigation(Astro2.props);
+  console.log("-----------------------B:", Astro2.props.content.file);
+  console.log("pageSubpath()           :", pageSubpath(Astro2.props.content.file) === "" ? "*" : pageSubpath(Astro2.props.content.file));
+  console.log("basePagePath()          :", basePagePath());
+  console.log("topicNavigationPath     :", topicNavigationPath(Astro2.props.content.file));
+  console.log("-----------------------E:", Astro2.props.content.file);
   return renderTemplate`<html lang="en" class="scroll-smooth">
 ${renderComponent($$result, "Head", $$Head, { "title": pageTitle, "description": description, "canonicalURL": canonicalURL, "font_awesome": font_awesome, "site_map": site_map, "rss_feed": rss_feed })}
 
@@ -2483,76 +2572,17 @@ ${maybeRenderHead($$result)}<body class="bg-white dark:bg-slate-900">
 </body></html>`;
 }, "/Users/davidcruwys/dev/sites/flivideo.com/src/layouts/BaseLayout.astro");
 
-const html$3 = "";
+const $$file = "/Users/davidcruwys/dev/sites/flivideo.com/src/layouts/BaseLayout.astro";
+const $$url = undefined;
 
-				const _internal$3 = {
-					injectedFrontmatter: {},
-				};
-				const frontmatter$3 = {"layout":"~/layouts/BaseLayout.astro","title":"FliVideo","pageTitle":"Home | FliVideo","description":"Automate your video influence","hero":true};
-				const file$3 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/index.md";
-				const url$3 = "";
-				function rawContent$3() {
-					return "\n\n";
-				}
-				function compiledContent$3() {
-					return html$3;
-				}
-				function getHeadings$3() {
-					return [];
-				}
-				function getHeaders$3() {
-					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
-					return getHeadings$3();
-				}				async function Content$3() {
-					const { layout, ...content } = frontmatter$3;
-					content.file = file$3;
-					content.url = url$3;
-					content.astro = {};
-					Object.defineProperty(content.astro, 'headings', {
-						get() {
-							throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."')
-						}
-					});
-					Object.defineProperty(content.astro, 'html', {
-						get() {
-							throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."')
-						}
-					});
-					Object.defineProperty(content.astro, 'source', {
-						get() {
-							throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."')
-						}
-					});
-					const contentFragment = createVNode(Fragment, { 'set:html': html$3 });
-					return createVNode($$BaseLayout, {
-									file: file$3,
-									url: url$3,
-									content,
-									frontmatter: content,
-									headings: getHeadings$3(),
-									rawContent: rawContent$3,
-									compiledContent: compiledContent$3,
-									'server:root': true,
-									children: contentFragment
-								});
-				}
-				Content$3[Symbol.for('astro.needsHeadRendering')] = false;
-
-const _page0 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const BaseLayout = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  _internal: _internal$3,
-  frontmatter: frontmatter$3,
-  file: file$3,
-  url: url$3,
-  rawContent: rawContent$3,
-  compiledContent: compiledContent$3,
-  getHeadings: getHeadings$3,
-  getHeaders: getHeaders$3,
-  Content: Content$3,
-  default: Content$3
+  default: $$BaseLayout,
+  file: $$file,
+  url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const html$2 = "<h2 id=\"interesting\">Interesting</h2>\n<h3 id=\"general\">General</h3>\n<p><a href=\"https://medium.com/rubycademy/the-super-keyword-a75b67f46f05\">https://medium.com/rubycademy/the-super-keyword-a75b67f46f05</a>\n<a href=\"https://blog.appsignal.com/2019/09/03/inherited-hook-method-and-parenting.html\">https://blog.appsignal.com/2019/09/03/inherited-hook-method-and-parenting.html</a>\n<a href=\"https://medium.com/@jeffm.adler/inheriting-class-variables-in-ruby-971f8f977884\">https://medium.com/@jeffm.adler/inheriting-class-variables-in-ruby-971f8f977884</a>\n<a href=\"https://mixandgo.com/learn/ruby/class-variables\">https://mixandgo.com/learn/ruby/class-variables</a>\n<a href=\"https://medium.com/@amliving/diving-into-rubys-attr-accessor-d34e2ccc5477\">https://medium.com/@amliving/diving-into-rubys-attr-accessor-d34e2ccc5477</a>\n<a href=\"https://simonecarletti.com/blog/2009/09/inside-ruby-on-rails-extract_options-from-arrays/\">https://simonecarletti.com/blog/2009/09/inside-ruby-on-rails-extract_options-from-arrays/</a></p>\n<h3 id=\"inheritable-attributes\">Inheritable Attributes</h3>\n<p><a href=\"https://github.com/rails/rails/blob/45d6cd94b3ef2ec77166def41f29188445b35608/activesupport/lib/active_support/core_ext/class/attribute.rb\">https://github.com/rails/rails/blob/45d6cd94b3ef2ec77166def41f29188445b35608/activesupport/lib/active_support/core_ext/class/attribute.rb</a>\n<a href=\"https://stackoverflow.com/questions/6617769/how-do-i-replicate-class-inheritable-accessors-behavior-in-rails-3-1/6618620#6618620\">https://stackoverflow.com/questions/6617769/how-do-i-replicate-class-inheritable-accessors-behavior-in-rails-3-1/6618620#6618620</a></p>\n<p>tube RoeCM8gD20A\ntube MGNq1dm2wUM\ntube jbc05dHW7Oc\ntube 5c9SapE_YNU\ntube qgpmYZpsY0A\ntube j1-6uHTQLzo\ntube q2PmmBuNfTk\ntube 56QrXA0Ey0E\ntube mJHGcYtay6s\ntube mJHGcYtay6s\ntube tmXbM0INj50\ntube 7o8hAhtEMhc</p>";
+const html$2 = "<h2 id=\"interesting\">Interesting</h2>";
 
 				const _internal$2 = {
 					injectedFrontmatter: {},
@@ -2561,13 +2591,13 @@ const html$2 = "<h2 id=\"interesting\">Interesting</h2>\n<h3 id=\"general\">Gene
 				const file$2 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/canva/index.md";
 				const url$2 = "/canva";
 				function rawContent$2() {
-					return "\n## Interesting\n\n### General\n\nhttps://medium.com/rubycademy/the-super-keyword-a75b67f46f05\nhttps://blog.appsignal.com/2019/09/03/inherited-hook-method-and-parenting.html\nhttps://medium.com/@jeffm.adler/inheriting-class-variables-in-ruby-971f8f977884\nhttps://mixandgo.com/learn/ruby/class-variables\nhttps://medium.com/@amliving/diving-into-rubys-attr-accessor-d34e2ccc5477\nhttps://simonecarletti.com/blog/2009/09/inside-ruby-on-rails-extract_options-from-arrays/\n\n\n### Inheritable Attributes\nhttps://github.com/rails/rails/blob/45d6cd94b3ef2ec77166def41f29188445b35608/activesupport/lib/active_support/core_ext/class/attribute.rb\nhttps://stackoverflow.com/questions/6617769/how-do-i-replicate-class-inheritable-accessors-behavior-in-rails-3-1/6618620#6618620\n\n\ntube RoeCM8gD20A\ntube MGNq1dm2wUM\ntube jbc05dHW7Oc\ntube 5c9SapE_YNU\ntube qgpmYZpsY0A\ntube j1-6uHTQLzo\ntube q2PmmBuNfTk\ntube 56QrXA0Ey0E\ntube mJHGcYtay6s\ntube mJHGcYtay6s\ntube tmXbM0INj50\ntube 7o8hAhtEMhc";
+					return "\n## Interesting\n";
 				}
 				function compiledContent$2() {
 					return html$2;
 				}
 				function getHeadings$2() {
-					return [{"depth":2,"slug":"interesting","text":"Interesting"},{"depth":3,"slug":"general","text":"General"},{"depth":3,"slug":"inheritable-attributes","text":"Inheritable Attributes"}];
+					return [{"depth":2,"slug":"interesting","text":"Interesting"}];
 				}
 				function getHeaders$2() {
 					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
@@ -2621,7 +2651,7 @@ const _page1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   default: Content$2
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const html$1 = "<h2 id=\"website-templatesexamples\">Website Templates/Examples</h2>\n<h3 id=\"framesworks\">Framesworks</h3>\n<p><a href=\"\">AVO</a>\n<a href=\"https://github.com/bullet-train-co/bullet_train\">Bullet Train</a>\n<a href=\"https://bullettrain.co/docs\">Bullet Train Docs</a></p>\n<h3 id=\"e-commerce\">E-Commerce</h3>\n<p><a href=\"https://www.youtube.com/watch?v=Bd4y64Dk5QU\">E-Commerce Ruby on Rails</a></p>\n<h2 id=\"impersonation\">Impersonation</h2>\n<h3 id=\"pretender\">Pretender</h3>\n<p><a href=\"https://github.com/ankane/pretender\">GEM Repo</a></p>\n<h2 id=\"stimulas--turbo--hotwire\">Stimulas / Turbo / HotWire</h2>\n<p><a href=\"https://stimulus.hotwired.dev/handbook/introduction\">handbook introduction</a>\n<a href=\"https://turbo.hotwired.dev/reference/frames#frame-that-promotes-navigations-to-visits\">Frames</a>\n<a href=\"https://www.youtube.com/watch?v=0CSGsHnci2I\">Turbo and Rails 7</a>\n<a href=\"https://github.com/hotwired/turbo-rails\">Turbo-Rails Repo</a>\n<a href=\"https://www.hotrails.dev/turbo-rails/nested-turbo-frames\">Nested Rails Frames</a>\n<a href=\"https://evilmartians.com/chronicles/hotwire-reactive-rails-with-no-javascript\">Reactive Javascript</a></p>\n<h2 id=\"security\">Security</h2>\n<h3 id=\"devise\">Devise</h3>\n<p><a href=\"https://www.youtube.com/watch?v=XJ27X06GVrI\">Devise and Turbo - Rails 7</a></p>\n<h3 id=\"authorization--roles\">Authorization / Roles</h3>\n<p><a href=\"https://www.youtube.com/watch?v=PmkBBRq6jQ0\">Creating Roles</a></p>\n<p><a href=\"https://www.youtube.com/watch?v=Yrsgk9l3e3U\">Authorization with Pundit</a>\n<a href=\"https://www.youtube.com/watch?v=xxkx57-vbQI\">Ruby on Rails #49 gem Pundit for Authorization - Complete Guide</a>\n<a href=\"https://www.youtube.com/results?search_query=rails+7+pundit\">More on Pundit</a>\n<a href=\"https://github.com/palkan/action_policy\">Action Policy</a>\n<a href=\"https://entrision.com/blog/comparing-cancan-vs-pundit/\">CanCanCan vs Pundit</a>\n[CanCanCan vs Pundit a comparative study]*<a href=\"https://blog.francium.tech/pundit-vs-cancancan-a-comparative-study-a8f7ab8f9ae8?gi=3260f1fd186b\">https://blog.francium.tech/pundit-vs-cancancan-a-comparative-study-a8f7ab8f9ae8?gi=3260f1fd186b</a>)</p>\n<h3 id=\"image-processing\">Image Processing</h3>\n<p><a href=\"https://github.com/janko/image_processing\">GEM Repo</a></p>\n<h3 id=\"randsack\">Randsack</h3>\n<p><a href=\"https://github.com/activerecord-hackery/ransack\">GEM Reop</a></p>\n<h3 id=\"profiling\">Profiling</h3>\n<p><a href=\"https://world.hey.com/jdmo/profiling-your-ruby-on-rails-application-like-a-boss-8ee936a8\">StackProf</a>\n<a href=\"https://github.com/tmm1/stackprof\">StackProf GEM</a></p>\n<h2 id=\"admin-systems\">Admin Systems</h2>\n<p><a href=\"https://www.youtube.com/results?search_query=rails+avo\">AVO</a></p>\n<h2 id=\"bundler\">Bundler</h2>\n<p>List of useful bundler commands</p>\n<pre is:raw=\"\" class=\"astro-code\" style=\"background-color: #0d1117; overflow-x: auto;\"><code><span class=\"line\"><span style=\"color: #C9D1D9\">rm -rf Gemfile.lock </span><span style=\"color: #FF7B72\">&#x26;&#x26;</span><span style=\"color: #C9D1D9\"> bi </span><span style=\"color: #FF7B72\">&#x26;&#x26;</span><span style=\"color: #C9D1D9\"> bundler-audit</span></span>\n<span class=\"line\"><span style=\"color: #C9D1D9\">rm Gemfile.lock </span><span style=\"color: #FF7B72\">&#x26;&#x26;</span><span style=\"color: #C9D1D9\"> bi </span><span style=\"color: #FF7B72\">&#x26;&#x26;</span><span style=\"color: #C9D1D9\"> bundle outdated </span><span style=\"color: #FF7B72\">&#x26;&#x26;</span><span style=\"color: #C9D1D9\"> gs</span></span></code></pre>";
+const html$1 = "<h2 id=\"website-templatesexamples\">Website Templates/Examples</h2>";
 
 				const _internal$1 = {
 					injectedFrontmatter: {},
@@ -2630,13 +2660,13 @@ const html$1 = "<h2 id=\"website-templatesexamples\">Website Templates/Examples<
 				const file$1 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/canva/gems/index.md";
 				const url$1 = "/canva/gems";
 				function rawContent$1() {
-					return "\n## Website Templates/Examples\n\n### Framesworks\n\n[AVO]()\n[Bullet Train](https://github.com/bullet-train-co/bullet_train)\n[Bullet Train Docs](https://bullettrain.co/docs)\n\n### E-Commerce\n\n[E-Commerce Ruby on Rails](https://www.youtube.com/watch?v=Bd4y64Dk5QU)\n\n## Impersonation\n\n### Pretender\n\n[GEM Repo](https://github.com/ankane/pretender)\n\n## Stimulas / Turbo / HotWire\n\n[handbook introduction](https://stimulus.hotwired.dev/handbook/introduction)\n[Frames](https://turbo.hotwired.dev/reference/frames#frame-that-promotes-navigations-to-visits)\n[Turbo and Rails 7](https://www.youtube.com/watch?v=0CSGsHnci2I)\n[Turbo-Rails Repo](https://github.com/hotwired/turbo-rails)\n[Nested Rails Frames](https://www.hotrails.dev/turbo-rails/nested-turbo-frames)\n[Reactive Javascript](https://evilmartians.com/chronicles/hotwire-reactive-rails-with-no-javascript)\n\n## Security\n\n### Devise\n\n[Devise and Turbo - Rails 7](https://www.youtube.com/watch?v=XJ27X06GVrI)\n\n### Authorization / Roles\n\n[Creating Roles](https://www.youtube.com/watch?v=PmkBBRq6jQ0)\n\n[Authorization with Pundit](https://www.youtube.com/watch?v=Yrsgk9l3e3U)\n[Ruby on Rails #49 gem Pundit for Authorization - Complete Guide](https://www.youtube.com/watch?v=xxkx57-vbQI)\n[More on Pundit](https://www.youtube.com/results?search_query=rails+7+pundit)\n[Action Policy](https://github.com/palkan/action_policy)\n[CanCanCan vs Pundit](https://entrision.com/blog/comparing-cancan-vs-pundit/)\n[CanCanCan vs Pundit a comparative study]*https://blog.francium.tech/pundit-vs-cancancan-a-comparative-study-a8f7ab8f9ae8?gi=3260f1fd186b)\n\n\n### Image Processing\n\n[GEM Repo](https://github.com/janko/image_processing)\n\n### Randsack\n\n[GEM Reop](https://github.com/activerecord-hackery/ransack)\n\n### Profiling\n\n[StackProf](https://world.hey.com/jdmo/profiling-your-ruby-on-rails-application-like-a-boss-8ee936a8)\n[StackProf GEM](https://github.com/tmm1/stackprof)\n\n## Admin Systems\n\n[AVO](https://www.youtube.com/results?search_query=rails+avo)\n\n## Bundler\n\nList of useful bundler commands\n\n```bash\nrm -rf Gemfile.lock && bi && bundler-audit\nrm Gemfile.lock && bi && bundle outdated && gs\n```";
+					return "\n## Website Templates/Examples\n\n";
 				}
 				function compiledContent$1() {
 					return html$1;
 				}
 				function getHeadings$1() {
-					return [{"depth":2,"slug":"website-templatesexamples","text":"Website Templates/Examples"},{"depth":3,"slug":"framesworks","text":"Framesworks"},{"depth":3,"slug":"e-commerce","text":"E-Commerce"},{"depth":2,"slug":"impersonation","text":"Impersonation"},{"depth":3,"slug":"pretender","text":"Pretender"},{"depth":2,"slug":"stimulas--turbo--hotwire","text":"Stimulas / Turbo / HotWire"},{"depth":2,"slug":"security","text":"Security"},{"depth":3,"slug":"devise","text":"Devise"},{"depth":3,"slug":"authorization--roles","text":"Authorization / Roles"},{"depth":3,"slug":"image-processing","text":"Image Processing"},{"depth":3,"slug":"randsack","text":"Randsack"},{"depth":3,"slug":"profiling","text":"Profiling"},{"depth":2,"slug":"admin-systems","text":"Admin Systems"},{"depth":2,"slug":"bundler","text":"Bundler"}];
+					return [{"depth":2,"slug":"website-templatesexamples","text":"Website Templates/Examples"}];
 				}
 				function getHeaders$1() {
 					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
@@ -2944,7 +2974,7 @@ const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   default: Content
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const pageMap = new Map([['src/pages/index.md', _page0],['src/pages/canva/index.md', _page1],['src/pages/canva/gems/index.md', _page2],['src/pages/home.md', _page3],]);
+const pageMap = new Map([['src/pages/index.mdx', _page0],['src/pages/canva/index.md', _page1],['src/pages/canva/gems/index.md', _page2],['src/pages/home.md', _page3],]);
 const renderers = [Object.assign({"name":"astro:jsx","serverEntrypoint":"astro/jsx/server.js","jsxImportSource":"astro"}, { ssr: server_default }),];
 
 if (typeof process !== "undefined") {
@@ -3021,7 +3051,7 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/index.e86e27f9.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.md","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.e86e27f9.css"],"scripts":[],"routeData":{"route":"/canva","type":"page","pattern":"^\\/canva\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/index.md","pathname":"/canva","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.e86e27f9.css"],"scripts":[],"routeData":{"route":"/canva/gems","type":"page","pattern":"^\\/canva\\/gems\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}],[{"content":"gems","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/gems/index.md","pathname":"/canva/gems","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.e86e27f9.css"],"scripts":[],"routeData":{"route":"/home","type":"page","pattern":"^\\/home\\/?$","segments":[[{"content":"home","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/home.md","pathname":"/home","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","astro:scripts/before-hydration.js":""},"assets":["/assets/index.e86e27f9.css","/favicon.svg","/fonts/Inter-italic.var.woff2","/fonts/Inter-roman.var.woff2","/fonts/lexend.txt","/fonts/lexend.woff2","/images/logo-fli-video-icon.png","/images/logo-fli-video-icon.svg","/images/logo-fli-video-tagline.png","/images/logo-fli-video-tagline.svg","/images/logo-fli-video.png","/images/logo-fli-video.svg"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.mdx","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/canva","type":"page","pattern":"^\\/canva\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/index.md","pathname":"/canva","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/canva/gems","type":"page","pattern":"^\\/canva\\/gems\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}],[{"content":"gems","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/gems/index.md","pathname":"/canva/gems","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/home","type":"page","pattern":"^\\/home\\/?$","segments":[[{"content":"home","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/home.md","pathname":"/home","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","astro:scripts/before-hydration.js":""},"assets":["/assets/index.f983fcfa.css","/favicon.svg","/fonts/Inter-italic.var.woff2","/fonts/Inter-roman.var.woff2","/fonts/lexend.txt","/fonts/lexend.woff2","/images/david.png","/images/logo-fli-video-icon.png","/images/logo-fli-video-icon.svg","/images/logo-fli-video-tagline.png","/images/logo-fli-video-tagline.svg","/images/logo-fli-video.png","/images/logo-fli-video.svg"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });

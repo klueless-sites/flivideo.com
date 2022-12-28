@@ -84,16 +84,16 @@ export function pageSubpath(file: string): string {
 }
 
 export function basePagePath(): string {
-  return '/Users/davidcruwys/dev/sites/appydave-v2.com/src/pages/';
+  return new URL('../pages/', import.meta.url).pathname
+
   // const result = new URL('../pages/', import.meta.url).pathname;
-  // const result = '/Users/davidcruwys/dev/sites/appydave-v2.com/src/pages/';
 
   // console.log('basePagePath            :', result);
-  // console.log(result === '/Users/davidcruwys/dev/sites/appydave-v2.com/src/pages/' ? "GOOD" : "******* BAD *******");
-  // if (result !== '/Users/davidcruwys/dev/sites/appydave-v2.com/src/pages/') {
+  // console.log(result === '/Users/davidcruwys/dev/sites/flivideo.com/src/pages/' ? "GOOD" : "******* BAD *******");
+  // if (result !== '/Users/davidcruwys/dev/sites/flivideo.com/src/pages/') {
   //   console.log("******* BAD *******1");
   //   console.log(result);
-  //   console.log('/Users/davidcruwys/dev/sites/appydave-v2.com/src/pages/');
+  //   console.log('/Users/davidcruwys/dev/sites/flivideo.com/src/pages/');
   //   console.log("******* BAD *******2");
   // }
   // return result;
