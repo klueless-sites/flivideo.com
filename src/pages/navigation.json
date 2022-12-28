@@ -1,0 +1,10 @@
+{
+  "sections": [
+    {
+      "title": "Introduction",
+      "links": [
+        { "title": "Getting started", "href": "/" }
+      ]
+    }
+  ]
+}
