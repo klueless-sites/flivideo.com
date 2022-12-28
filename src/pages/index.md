@@ -21,8 +21,23 @@ I have a need to be come a Youtube influence and in meeting that need I have had
 FliVideo is where I gather knowledge on the tools, systems and automation's that you could implement to create your own Youtube content and influence.
 
 
-  and resources to help me automate my video influence.
-Learn how to systematize adn automate your video influence. Create more content, reach more people, and grow your business.
+### Learn to automate your video influence
+
+- Create videos quickly
+- Develop graphics and thumbnails
+- Using AI to write headlines, scripts and descriptions
+- Using AI to create thumbnails
+
+### Systems
+
+- The workflows I use to create multiple shorts per day
+
+
+### Techniques
+
+### Software automation using code, macros and API's
+
+- Tools for creating videos
 
 
 ## A little about me
