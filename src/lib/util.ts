@@ -17,56 +17,8 @@ const QUICK_NAVIGATION = {
       title: 'Quick Links',
       links: [
         {
-          title: 'Sitemap (debug)',
-          href: '/sitemap'
-        },
-        {
-          title: 'Ruby GEMs',
-          href: '/ruby/gems'
-        },
-        {
-          title: 'astrojs',
-          href: '/astrojs'
-        },
-        {
-          title: 'Javascript',
-          href: '/javascript'
-        },
-        {
-          title: 'Ideas',
-          href: '/ideas'
-        },
-        {
-          title: 'Peers',
-          href: '/peers'
-        },
-        {
-          title: 'Tools',
-          href: '/tools'
-        },
-        {
-          title: 'Git',
-          href: '/git'
-        },
-        {
-          title: 'Tailwind',
-          href: '/tailwind'
-        },
-        {
-          title: 'LoCode/NoCode',
-          href: '/locode'
-        },
-        {
-          title: 'Open AI',
-          href: '/openai'
-        },
-        {
-          title: 'Docker',
-          href: '/docker'
-        },
-        {
-          title: 'New Home',
-          href: '/home'
+          title: 'Canva (Tips, Tricks, Tutorials)',
+          href: '/canva'
         }
       ]
     }

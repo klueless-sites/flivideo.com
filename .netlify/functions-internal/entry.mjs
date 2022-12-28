@@ -1762,56 +1762,8 @@ const QUICK_NAVIGATION = {
       title: "Quick Links",
       links: [
         {
-          title: "Sitemap (debug)",
-          href: "/sitemap"
-        },
-        {
-          title: "Ruby GEMs",
-          href: "/ruby/gems"
-        },
-        {
-          title: "astrojs",
-          href: "/astrojs"
-        },
-        {
-          title: "Javascript",
-          href: "/javascript"
-        },
-        {
-          title: "Ideas",
-          href: "/ideas"
-        },
-        {
-          title: "Peers",
-          href: "/peers"
-        },
-        {
-          title: "Tools",
-          href: "/tools"
-        },
-        {
-          title: "Git",
-          href: "/git"
-        },
-        {
-          title: "Tailwind",
-          href: "/tailwind"
-        },
-        {
-          title: "LoCode/NoCode",
-          href: "/locode"
-        },
-        {
-          title: "Open AI",
-          href: "/openai"
-        },
-        {
-          title: "Docker",
-          href: "/docker"
-        },
-        {
-          title: "New Home",
-          href: "/home"
+          title: "Canva (Tips, Tricks, Tutorials)",
+          href: "/canva"
         }
       ]
     }
@@ -2531,22 +2483,160 @@ ${maybeRenderHead($$result)}<body class="bg-white dark:bg-slate-900">
 </body></html>`;
 }, "/Users/davidcruwys/dev/sites/flivideo.com/src/layouts/BaseLayout.astro");
 
-const html$1 = "";
+const html$3 = "";
+
+				const _internal$3 = {
+					injectedFrontmatter: {},
+				};
+				const frontmatter$3 = {"layout":"~/layouts/BaseLayout.astro","title":"FliVideo","pageTitle":"Home | FliVideo","description":"Automate your video influence","hero":true};
+				const file$3 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/index.md";
+				const url$3 = "";
+				function rawContent$3() {
+					return "\n\n";
+				}
+				function compiledContent$3() {
+					return html$3;
+				}
+				function getHeadings$3() {
+					return [];
+				}
+				function getHeaders$3() {
+					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
+					return getHeadings$3();
+				}				async function Content$3() {
+					const { layout, ...content } = frontmatter$3;
+					content.file = file$3;
+					content.url = url$3;
+					content.astro = {};
+					Object.defineProperty(content.astro, 'headings', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."')
+						}
+					});
+					Object.defineProperty(content.astro, 'html', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."')
+						}
+					});
+					Object.defineProperty(content.astro, 'source', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."')
+						}
+					});
+					const contentFragment = createVNode(Fragment, { 'set:html': html$3 });
+					return createVNode($$BaseLayout, {
+									file: file$3,
+									url: url$3,
+									content,
+									frontmatter: content,
+									headings: getHeadings$3(),
+									rawContent: rawContent$3,
+									compiledContent: compiledContent$3,
+									'server:root': true,
+									children: contentFragment
+								});
+				}
+				Content$3[Symbol.for('astro.needsHeadRendering')] = false;
+
+const _page0 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  _internal: _internal$3,
+  frontmatter: frontmatter$3,
+  file: file$3,
+  url: url$3,
+  rawContent: rawContent$3,
+  compiledContent: compiledContent$3,
+  getHeadings: getHeadings$3,
+  getHeaders: getHeaders$3,
+  Content: Content$3,
+  default: Content$3
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const html$2 = "<h2 id=\"interesting\">Interesting</h2>\n<h3 id=\"general\">General</h3>\n<p><a href=\"https://medium.com/rubycademy/the-super-keyword-a75b67f46f05\">https://medium.com/rubycademy/the-super-keyword-a75b67f46f05</a>\n<a href=\"https://blog.appsignal.com/2019/09/03/inherited-hook-method-and-parenting.html\">https://blog.appsignal.com/2019/09/03/inherited-hook-method-and-parenting.html</a>\n<a href=\"https://medium.com/@jeffm.adler/inheriting-class-variables-in-ruby-971f8f977884\">https://medium.com/@jeffm.adler/inheriting-class-variables-in-ruby-971f8f977884</a>\n<a href=\"https://mixandgo.com/learn/ruby/class-variables\">https://mixandgo.com/learn/ruby/class-variables</a>\n<a href=\"https://medium.com/@amliving/diving-into-rubys-attr-accessor-d34e2ccc5477\">https://medium.com/@amliving/diving-into-rubys-attr-accessor-d34e2ccc5477</a>\n<a href=\"https://simonecarletti.com/blog/2009/09/inside-ruby-on-rails-extract_options-from-arrays/\">https://simonecarletti.com/blog/2009/09/inside-ruby-on-rails-extract_options-from-arrays/</a></p>\n<h3 id=\"inheritable-attributes\">Inheritable Attributes</h3>\n<p><a href=\"https://github.com/rails/rails/blob/45d6cd94b3ef2ec77166def41f29188445b35608/activesupport/lib/active_support/core_ext/class/attribute.rb\">https://github.com/rails/rails/blob/45d6cd94b3ef2ec77166def41f29188445b35608/activesupport/lib/active_support/core_ext/class/attribute.rb</a>\n<a href=\"https://stackoverflow.com/questions/6617769/how-do-i-replicate-class-inheritable-accessors-behavior-in-rails-3-1/6618620#6618620\">https://stackoverflow.com/questions/6617769/how-do-i-replicate-class-inheritable-accessors-behavior-in-rails-3-1/6618620#6618620</a></p>\n<p>tube RoeCM8gD20A\ntube MGNq1dm2wUM\ntube jbc05dHW7Oc\ntube 5c9SapE_YNU\ntube qgpmYZpsY0A\ntube j1-6uHTQLzo\ntube q2PmmBuNfTk\ntube 56QrXA0Ey0E\ntube mJHGcYtay6s\ntube mJHGcYtay6s\ntube tmXbM0INj50\ntube 7o8hAhtEMhc</p>";
+
+				const _internal$2 = {
+					injectedFrontmatter: {},
+				};
+				const frontmatter$2 = {"layout":"~/layouts/BaseLayout.astro","title":"Ruby"};
+				const file$2 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/canva/index.md";
+				const url$2 = "/canva";
+				function rawContent$2() {
+					return "\n## Interesting\n\n### General\n\nhttps://medium.com/rubycademy/the-super-keyword-a75b67f46f05\nhttps://blog.appsignal.com/2019/09/03/inherited-hook-method-and-parenting.html\nhttps://medium.com/@jeffm.adler/inheriting-class-variables-in-ruby-971f8f977884\nhttps://mixandgo.com/learn/ruby/class-variables\nhttps://medium.com/@amliving/diving-into-rubys-attr-accessor-d34e2ccc5477\nhttps://simonecarletti.com/blog/2009/09/inside-ruby-on-rails-extract_options-from-arrays/\n\n\n### Inheritable Attributes\nhttps://github.com/rails/rails/blob/45d6cd94b3ef2ec77166def41f29188445b35608/activesupport/lib/active_support/core_ext/class/attribute.rb\nhttps://stackoverflow.com/questions/6617769/how-do-i-replicate-class-inheritable-accessors-behavior-in-rails-3-1/6618620#6618620\n\n\ntube RoeCM8gD20A\ntube MGNq1dm2wUM\ntube jbc05dHW7Oc\ntube 5c9SapE_YNU\ntube qgpmYZpsY0A\ntube j1-6uHTQLzo\ntube q2PmmBuNfTk\ntube 56QrXA0Ey0E\ntube mJHGcYtay6s\ntube mJHGcYtay6s\ntube tmXbM0INj50\ntube 7o8hAhtEMhc";
+				}
+				function compiledContent$2() {
+					return html$2;
+				}
+				function getHeadings$2() {
+					return [{"depth":2,"slug":"interesting","text":"Interesting"},{"depth":3,"slug":"general","text":"General"},{"depth":3,"slug":"inheritable-attributes","text":"Inheritable Attributes"}];
+				}
+				function getHeaders$2() {
+					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
+					return getHeadings$2();
+				}				async function Content$2() {
+					const { layout, ...content } = frontmatter$2;
+					content.file = file$2;
+					content.url = url$2;
+					content.astro = {};
+					Object.defineProperty(content.astro, 'headings', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."')
+						}
+					});
+					Object.defineProperty(content.astro, 'html', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."')
+						}
+					});
+					Object.defineProperty(content.astro, 'source', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."')
+						}
+					});
+					const contentFragment = createVNode(Fragment, { 'set:html': html$2 });
+					return createVNode($$BaseLayout, {
+									file: file$2,
+									url: url$2,
+									content,
+									frontmatter: content,
+									headings: getHeadings$2(),
+									rawContent: rawContent$2,
+									compiledContent: compiledContent$2,
+									'server:root': true,
+									children: contentFragment
+								});
+				}
+				Content$2[Symbol.for('astro.needsHeadRendering')] = false;
+
+const _page1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  _internal: _internal$2,
+  frontmatter: frontmatter$2,
+  file: file$2,
+  url: url$2,
+  rawContent: rawContent$2,
+  compiledContent: compiledContent$2,
+  getHeadings: getHeadings$2,
+  getHeaders: getHeaders$2,
+  Content: Content$2,
+  default: Content$2
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const html$1 = "<h2 id=\"website-templatesexamples\">Website Templates/Examples</h2>\n<h3 id=\"framesworks\">Framesworks</h3>\n<p><a href=\"\">AVO</a>\n<a href=\"https://github.com/bullet-train-co/bullet_train\">Bullet Train</a>\n<a href=\"https://bullettrain.co/docs\">Bullet Train Docs</a></p>\n<h3 id=\"e-commerce\">E-Commerce</h3>\n<p><a href=\"https://www.youtube.com/watch?v=Bd4y64Dk5QU\">E-Commerce Ruby on Rails</a></p>\n<h2 id=\"impersonation\">Impersonation</h2>\n<h3 id=\"pretender\">Pretender</h3>\n<p><a href=\"https://github.com/ankane/pretender\">GEM Repo</a></p>\n<h2 id=\"stimulas--turbo--hotwire\">Stimulas / Turbo / HotWire</h2>\n<p><a href=\"https://stimulus.hotwired.dev/handbook/introduction\">handbook introduction</a>\n<a href=\"https://turbo.hotwired.dev/reference/frames#frame-that-promotes-navigations-to-visits\">Frames</a>\n<a href=\"https://www.youtube.com/watch?v=0CSGsHnci2I\">Turbo and Rails 7</a>\n<a href=\"https://github.com/hotwired/turbo-rails\">Turbo-Rails Repo</a>\n<a href=\"https://www.hotrails.dev/turbo-rails/nested-turbo-frames\">Nested Rails Frames</a>\n<a href=\"https://evilmartians.com/chronicles/hotwire-reactive-rails-with-no-javascript\">Reactive Javascript</a></p>\n<h2 id=\"security\">Security</h2>\n<h3 id=\"devise\">Devise</h3>\n<p><a href=\"https://www.youtube.com/watch?v=XJ27X06GVrI\">Devise and Turbo - Rails 7</a></p>\n<h3 id=\"authorization--roles\">Authorization / Roles</h3>\n<p><a href=\"https://www.youtube.com/watch?v=PmkBBRq6jQ0\">Creating Roles</a></p>\n<p><a href=\"https://www.youtube.com/watch?v=Yrsgk9l3e3U\">Authorization with Pundit</a>\n<a href=\"https://www.youtube.com/watch?v=xxkx57-vbQI\">Ruby on Rails #49 gem Pundit for Authorization - Complete Guide</a>\n<a href=\"https://www.youtube.com/results?search_query=rails+7+pundit\">More on Pundit</a>\n<a href=\"https://github.com/palkan/action_policy\">Action Policy</a>\n<a href=\"https://entrision.com/blog/comparing-cancan-vs-pundit/\">CanCanCan vs Pundit</a>\n[CanCanCan vs Pundit a comparative study]*<a href=\"https://blog.francium.tech/pundit-vs-cancancan-a-comparative-study-a8f7ab8f9ae8?gi=3260f1fd186b\">https://blog.francium.tech/pundit-vs-cancancan-a-comparative-study-a8f7ab8f9ae8?gi=3260f1fd186b</a>)</p>\n<h3 id=\"image-processing\">Image Processing</h3>\n<p><a href=\"https://github.com/janko/image_processing\">GEM Repo</a></p>\n<h3 id=\"randsack\">Randsack</h3>\n<p><a href=\"https://github.com/activerecord-hackery/ransack\">GEM Reop</a></p>\n<h3 id=\"profiling\">Profiling</h3>\n<p><a href=\"https://world.hey.com/jdmo/profiling-your-ruby-on-rails-application-like-a-boss-8ee936a8\">StackProf</a>\n<a href=\"https://github.com/tmm1/stackprof\">StackProf GEM</a></p>\n<h2 id=\"admin-systems\">Admin Systems</h2>\n<p><a href=\"https://www.youtube.com/results?search_query=rails+avo\">AVO</a></p>\n<h2 id=\"bundler\">Bundler</h2>\n<p>List of useful bundler commands</p>\n<pre is:raw=\"\" class=\"astro-code\" style=\"background-color: #0d1117; overflow-x: auto;\"><code><span class=\"line\"><span style=\"color: #C9D1D9\">rm -rf Gemfile.lock </span><span style=\"color: #FF7B72\">&#x26;&#x26;</span><span style=\"color: #C9D1D9\"> bi </span><span style=\"color: #FF7B72\">&#x26;&#x26;</span><span style=\"color: #C9D1D9\"> bundler-audit</span></span>\n<span class=\"line\"><span style=\"color: #C9D1D9\">rm Gemfile.lock </span><span style=\"color: #FF7B72\">&#x26;&#x26;</span><span style=\"color: #C9D1D9\"> bi </span><span style=\"color: #FF7B72\">&#x26;&#x26;</span><span style=\"color: #C9D1D9\"> bundle outdated </span><span style=\"color: #FF7B72\">&#x26;&#x26;</span><span style=\"color: #C9D1D9\"> gs</span></span></code></pre>";
 
 				const _internal$1 = {
 					injectedFrontmatter: {},
 				};
-				const frontmatter$1 = {"layout":"~/layouts/BaseLayout.astro","title":"FliVideo","pageTitle":"Home | FliVideo","description":"Automate your video influence","hero":true};
-				const file$1 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/index.md";
-				const url$1 = "";
+				const frontmatter$1 = {"layout":"~/layouts/BaseLayout.astro","title":"Ruby GEMs"};
+				const file$1 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/canva/gems/index.md";
+				const url$1 = "/canva/gems";
 				function rawContent$1() {
-					return "\n\n";
+					return "\n## Website Templates/Examples\n\n### Framesworks\n\n[AVO]()\n[Bullet Train](https://github.com/bullet-train-co/bullet_train)\n[Bullet Train Docs](https://bullettrain.co/docs)\n\n### E-Commerce\n\n[E-Commerce Ruby on Rails](https://www.youtube.com/watch?v=Bd4y64Dk5QU)\n\n## Impersonation\n\n### Pretender\n\n[GEM Repo](https://github.com/ankane/pretender)\n\n## Stimulas / Turbo / HotWire\n\n[handbook introduction](https://stimulus.hotwired.dev/handbook/introduction)\n[Frames](https://turbo.hotwired.dev/reference/frames#frame-that-promotes-navigations-to-visits)\n[Turbo and Rails 7](https://www.youtube.com/watch?v=0CSGsHnci2I)\n[Turbo-Rails Repo](https://github.com/hotwired/turbo-rails)\n[Nested Rails Frames](https://www.hotrails.dev/turbo-rails/nested-turbo-frames)\n[Reactive Javascript](https://evilmartians.com/chronicles/hotwire-reactive-rails-with-no-javascript)\n\n## Security\n\n### Devise\n\n[Devise and Turbo - Rails 7](https://www.youtube.com/watch?v=XJ27X06GVrI)\n\n### Authorization / Roles\n\n[Creating Roles](https://www.youtube.com/watch?v=PmkBBRq6jQ0)\n\n[Authorization with Pundit](https://www.youtube.com/watch?v=Yrsgk9l3e3U)\n[Ruby on Rails #49 gem Pundit for Authorization - Complete Guide](https://www.youtube.com/watch?v=xxkx57-vbQI)\n[More on Pundit](https://www.youtube.com/results?search_query=rails+7+pundit)\n[Action Policy](https://github.com/palkan/action_policy)\n[CanCanCan vs Pundit](https://entrision.com/blog/comparing-cancan-vs-pundit/)\n[CanCanCan vs Pundit a comparative study]*https://blog.francium.tech/pundit-vs-cancancan-a-comparative-study-a8f7ab8f9ae8?gi=3260f1fd186b)\n\n\n### Image Processing\n\n[GEM Repo](https://github.com/janko/image_processing)\n\n### Randsack\n\n[GEM Reop](https://github.com/activerecord-hackery/ransack)\n\n### Profiling\n\n[StackProf](https://world.hey.com/jdmo/profiling-your-ruby-on-rails-application-like-a-boss-8ee936a8)\n[StackProf GEM](https://github.com/tmm1/stackprof)\n\n## Admin Systems\n\n[AVO](https://www.youtube.com/results?search_query=rails+avo)\n\n## Bundler\n\nList of useful bundler commands\n\n```bash\nrm -rf Gemfile.lock && bi && bundler-audit\nrm Gemfile.lock && bi && bundle outdated && gs\n```";
 				}
 				function compiledContent$1() {
 					return html$1;
 				}
 				function getHeadings$1() {
-					return [];
+					return [{"depth":2,"slug":"website-templatesexamples","text":"Website Templates/Examples"},{"depth":3,"slug":"framesworks","text":"Framesworks"},{"depth":3,"slug":"e-commerce","text":"E-Commerce"},{"depth":2,"slug":"impersonation","text":"Impersonation"},{"depth":3,"slug":"pretender","text":"Pretender"},{"depth":2,"slug":"stimulas--turbo--hotwire","text":"Stimulas / Turbo / HotWire"},{"depth":2,"slug":"security","text":"Security"},{"depth":3,"slug":"devise","text":"Devise"},{"depth":3,"slug":"authorization--roles","text":"Authorization / Roles"},{"depth":3,"slug":"image-processing","text":"Image Processing"},{"depth":3,"slug":"randsack","text":"Randsack"},{"depth":3,"slug":"profiling","text":"Profiling"},{"depth":2,"slug":"admin-systems","text":"Admin Systems"},{"depth":2,"slug":"bundler","text":"Bundler"}];
 				}
 				function getHeaders$1() {
 					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
@@ -2586,7 +2676,7 @@ const html$1 = "";
 				}
 				Content$1[Symbol.for('astro.needsHeadRendering')] = false;
 
-const _page0 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   _internal: _internal$1,
   frontmatter: frontmatter$1,
@@ -2840,7 +2930,7 @@ const html = "<div class=\"relative bg-indigo-800\">\n  <div class=\"absolute in
 				}
 				Content[Symbol.for('astro.needsHeadRendering')] = false;
 
-const _page1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   _internal,
   frontmatter,
@@ -2854,7 +2944,7 @@ const _page1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   default: Content
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const pageMap = new Map([['src/pages/index.md', _page0],['src/pages/home.md', _page1],]);
+const pageMap = new Map([['src/pages/index.md', _page0],['src/pages/canva/index.md', _page1],['src/pages/canva/gems/index.md', _page2],['src/pages/home.md', _page3],]);
 const renderers = [Object.assign({"name":"astro:jsx","serverEntrypoint":"astro/jsx/server.js","jsxImportSource":"astro"}, { ssr: server_default }),];
 
 if (typeof process !== "undefined") {
@@ -2931,7 +3021,7 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/index.e86e27f9.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.md","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.e86e27f9.css"],"scripts":[],"routeData":{"route":"/home","type":"page","pattern":"^\\/home\\/?$","segments":[[{"content":"home","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/home.md","pathname":"/home","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","astro:scripts/before-hydration.js":""},"assets":["/assets/index.e86e27f9.css","/favicon.svg","/fonts/Inter-italic.var.woff2","/fonts/Inter-roman.var.woff2","/fonts/lexend.txt","/fonts/lexend.woff2","/images/logo-fli-video-icon.png","/images/logo-fli-video-icon.svg","/images/logo-fli-video-tagline.png","/images/logo-fli-video-tagline.svg","/images/logo-fli-video.png","/images/logo-fli-video.svg"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/index.e86e27f9.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.md","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.e86e27f9.css"],"scripts":[],"routeData":{"route":"/canva","type":"page","pattern":"^\\/canva\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/index.md","pathname":"/canva","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.e86e27f9.css"],"scripts":[],"routeData":{"route":"/canva/gems","type":"page","pattern":"^\\/canva\\/gems\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}],[{"content":"gems","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/gems/index.md","pathname":"/canva/gems","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.e86e27f9.css"],"scripts":[],"routeData":{"route":"/home","type":"page","pattern":"^\\/home\\/?$","segments":[[{"content":"home","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/home.md","pathname":"/home","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","astro:scripts/before-hydration.js":""},"assets":["/assets/index.e86e27f9.css","/favicon.svg","/fonts/Inter-italic.var.woff2","/fonts/Inter-roman.var.woff2","/fonts/lexend.txt","/fonts/lexend.woff2","/images/logo-fli-video-icon.png","/images/logo-fli-video-icon.svg","/images/logo-fli-video-tagline.png","/images/logo-fli-video-tagline.svg","/images/logo-fli-video.png","/images/logo-fli-video.svg"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });

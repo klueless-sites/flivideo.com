@@ -5,6 +5,7 @@ specifiers:
   '@astrojs/netlify': ^1.3.0
   '@astrojs/tailwind': ^2.1.3
   '@tailwindcss/typography': ^0.5.8
+  '@types/node': ^18.11.18
   astro: ^1.7.2
   tailwindcss: ^3.2.4
 
@@ -13,8 +14,11 @@ dependencies:
   '@astrojs/netlify': 1.3.0
   '@astrojs/tailwind': 2.1.3_tailwindcss@3.2.4
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
-  astro: 1.7.2
+  astro: 1.7.2_@types+node@18.11.18
   tailwindcss: 3.2.4
+
+devDependencies:
+  '@types/node': 18.11.18
 
 packages:
 
@@ -683,6 +687,9 @@ packages:
       '@types/unist': 2.0.6
     dev: false
 
+  /@types/node/18.11.18:
+    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+
   /@types/parse5/6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
     dev: false
@@ -816,7 +823,7 @@ packages:
     hasBin: true
     dev: false
 
-  /astro/1.7.2:
+  /astro/1.7.2_@types+node@18.11.18:
     resolution: {integrity: sha512-svgkfJUBcNzWV9YeoAGv+T96HjSK1j1xy1CbUA4JALU99WEvmJ1tFZBSrd1+m5xW9MuNOleSViGTfXhHfUaH9A==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
@@ -878,7 +885,7 @@ packages:
       typescript: 4.9.4
       unist-util-visit: 4.1.1
       vfile: 5.3.6
-      vite: 3.2.5
+      vite: 3.2.5_@types+node@18.11.18
       vitefu: 0.2.4_vite@3.2.5
       yargs-parser: 21.1.1
       zod: 3.20.2
@@ -3773,7 +3780,7 @@ packages:
       vfile-message: 3.1.3
     dev: false
 
-  /vite/3.2.5:
+  /vite/3.2.5_@types+node@18.11.18:
     resolution: {integrity: sha512-4mVEpXpSOgrssFZAOmGIr85wPHKvaDAcXqxVxVRZhljkJOMZi1ibLibzjLHzJvcok8BMguLc7g1W6W/GqZbLdQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3798,6 +3805,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 18.11.18
       esbuild: 0.15.18
       postcss: 8.4.20
       resolve: 1.22.1
@@ -3814,7 +3822,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 3.2.5
+      vite: 3.2.5_@types+node@18.11.18
     dev: false
 
   /vscode-css-languageservice/6.2.1:
