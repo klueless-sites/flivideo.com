@@ -1750,16 +1750,16 @@ var server_default = {
   renderToStaticMarkup
 };
 
-const MDXLayout = async function ({
+const MDXLayout$5 = async function ({
   children
 }) {
   const Layout = (await Promise.resolve().then(() => BaseLayout)).default;
   const {
     layout,
     ...content
-  } = frontmatter$3;
-  content.file = file$3;
-  content.url = url$3;
+  } = frontmatter$8;
+  content.file = file$8;
+  content.url = url$8;
   content.astro = {};
   Object.defineProperty(content.astro, "headings", {
     get() {
@@ -1777,26 +1777,26 @@ const MDXLayout = async function ({
     }
   });
   return createVNode(Layout, {
-    file: file$3,
-    url: url$3,
+    file: file$8,
+    url: url$8,
     content,
     frontmatter: content,
-    headings: getHeadings$3(),
+    headings: getHeadings$8(),
     "server:root": true,
     children
   });
 };
-const frontmatter$3 = {
+const frontmatter$8 = {
   "layout": "~/layouts/BaseLayout.astro",
   "title": "FliVideo",
   "pageTitle": "Home | FliVideo",
   "description": "Automate your video influence",
   "hero": true
 };
-const _internal$3 = {
+const _internal$8 = {
   injectedFrontmatter: {}
 };
-function getHeadings$3() {
+function getHeadings$8() {
   return [{
     "depth": 2,
     "slug": "automate-your-youtube-influence",
@@ -1831,7 +1831,7 @@ function getHeadings$3() {
     "text": "A little about me"
   }];
 }
-function _createMdxContent(props) {
+function _createMdxContent$5(props) {
   const _components = Object.assign({
     h2: "h2",
     p: "p",
@@ -1916,36 +1916,36 @@ function _createMdxContent(props) {
     })]
   });
 }
-function MDXContent(props = {}) {
-  return createVNode(MDXLayout, {
+function MDXContent$5(props = {}) {
+  return createVNode(MDXLayout$5, {
     ...props,
-    children: createVNode(_createMdxContent, {
+    children: createVNode(_createMdxContent$5, {
       ...props
     })
   });
 }
 
-__astro_tag_component__(getHeadings$3, "astro:jsx");
-__astro_tag_component__(MDXContent, "astro:jsx");
-const url$3 = "";
-const file$3 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/index.mdx";
-function rawContent$3() { throw new Error("MDX does not support rawContent()! If you need to read the Markdown contents to calculate values (ex. reading time), we suggest injecting frontmatter via remark plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }function compiledContent$3() { throw new Error("MDX does not support compiledContent()! If you need to read the HTML contents to calculate values (ex. reading time), we suggest injecting frontmatter via rehype plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }const Content$3 = (props = {}) => MDXContent({
+__astro_tag_component__(getHeadings$8, "astro:jsx");
+__astro_tag_component__(MDXContent$5, "astro:jsx");
+const url$8 = "";
+const file$8 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/index.mdx";
+function rawContent$8() { throw new Error("MDX does not support rawContent()! If you need to read the Markdown contents to calculate values (ex. reading time), we suggest injecting frontmatter via remark plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }function compiledContent$8() { throw new Error("MDX does not support compiledContent()! If you need to read the HTML contents to calculate values (ex. reading time), we suggest injecting frontmatter via rehype plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }const Content$8 = (props = {}) => MDXContent$5({
 											...props,
 											components: { Fragment, ...props.components },
 										});
-Content$3[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter$3.layout);
+Content$8[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter$8.layout);
 
 const _page0 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  frontmatter: frontmatter$3,
-  _internal: _internal$3,
-  getHeadings: getHeadings$3,
-  url: url$3,
-  file: file$3,
-  rawContent: rawContent$3,
-  compiledContent: compiledContent$3,
-  Content: Content$3,
-  default: Content$3
+  frontmatter: frontmatter$8,
+  _internal: _internal$8,
+  getHeadings: getHeadings$8,
+  url: url$8,
+  file: file$8,
+  rawContent: rawContent$8,
+  compiledContent: compiledContent$8,
+  Content: Content$8,
+  default: Content$8
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const SITE = {
@@ -2117,7 +2117,10 @@ const $$Hero = createComponent(async ($$result, $$props, $$slots) => {
             Automate your influence
           </p>
           <p class="mt-3 text-2xl tracking-tight text-gray-300">
-            Learn how to systemetise adn automate your video influence. Create more content, reach more people, and grow your business.
+            Learn how to systemetise and automate your video influence.
+          </p>
+          <p class="mt-3 text-2xl tracking-tight text-gray-300">
+            Create more content, reach more people, and grow your business.
           </p>
           <div class="mt-8 flex gap-4 md:justify-center lg:justify-start text-fli-100">
             <button href="/">
@@ -2307,10 +2310,10 @@ const $$Astro$7 = createAstro("/Users/davidcruwys/dev/sites/flivideo.com/src/com
 const $$Article = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
   Astro2.self = $$Article;
-  const { section = "xmen are cool", title = "It's good to be the king" } = Astro2.props;
+  const { section = "canva tips and tricks", title = "It's good to be the king" } = Astro2.props;
   return renderTemplate`${maybeRenderHead($$result)}<article>
   <header class="mb-9 space-y-1">
-    ${section && renderTemplate`${renderComponent($$result, "ArticleSection", $$ArticleSection, { "section": "{section}" })}`}
+    ${section && renderTemplate`${renderComponent($$result, "ArticleSection", $$ArticleSection, { "section": section })}`}
     ${title && renderTemplate`${renderComponent($$result, "ArticleTitle", $$ArticleTitle, { "title": title })}`}
   </header>
   ${renderComponent($$result, "Prose", $$Prose, {}, { "default": () => renderTemplate`${renderSlot($$result, $$slots["default"])}` })}
@@ -2514,17 +2517,13 @@ const $$Main = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$Main;
   const { title, headings, navigation, context } = Astro2.props;
-  return renderTemplate`${maybeRenderHead($$result)}<pre><code>
-  ${JSON.stringify(navigation, null, 2)}
-  </code></pre>
-  
-<div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
+  return renderTemplate`${maybeRenderHead($$result)}<div class="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
   <div class="hidden lg:relative lg:block lg:flex-none">
     ${renderComponent($$result, "Navigation", $$Navigation, { "navigation": navigation })}
   </div>
   <div class="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
     <!-- <code>
-      <pre>{JSON.stringify(context, null, 2)}</pre>
+      <pre>{JSON.stringify(navigation, null, 2)}</pre>
     </code> -->
     ${renderComponent($$result, "Article", $$Article, { "title": title }, { "default": () => renderTemplate`${renderSlot($$result, $$slots["default"])}` })}
     <dl class="mt-12 flex border-t border-slate-200 pt-6 dark:border-slate-800">
@@ -2557,11 +2556,6 @@ const $$BaseLayout = createComponent(async ($$result, $$props, $$slots) => {
     hero = Astro2.props.content.hero || false
   } = Astro2.props;
   const navigation = await topicNavigation(Astro2.props);
-  console.log("-----------------------B:", Astro2.props.content.file);
-  console.log("pageSubpath()           :", pageSubpath(Astro2.props.content.file) === "" ? "*" : pageSubpath(Astro2.props.content.file));
-  console.log("basePagePath()          :", basePagePath());
-  console.log("topicNavigationPath     :", topicNavigationPath(Astro2.props.content.file));
-  console.log("-----------------------E:", Astro2.props.content.file);
   return renderTemplate`<html lang="en" class="scroll-smooth">
 ${renderComponent($$result, "Head", $$Head, { "title": pageTitle, "description": description, "canonicalURL": canonicalURL, "font_awesome": font_awesome, "site_map": site_map, "rss_feed": rss_feed })}
 
@@ -2584,28 +2578,28 @@ const BaseLayout = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty
 
 const html$2 = "<h2 id=\"interesting\">Interesting</h2>";
 
-				const _internal$2 = {
+				const _internal$7 = {
 					injectedFrontmatter: {},
 				};
-				const frontmatter$2 = {"layout":"~/layouts/BaseLayout.astro","title":"Ruby"};
-				const file$2 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/canva/index.md";
-				const url$2 = "/canva";
-				function rawContent$2() {
+				const frontmatter$7 = {"layout":"~/layouts/BaseLayout.astro","title":"Ruby"};
+				const file$7 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/canva/index.md";
+				const url$7 = "/canva";
+				function rawContent$7() {
 					return "\n## Interesting\n";
 				}
-				function compiledContent$2() {
+				function compiledContent$7() {
 					return html$2;
 				}
-				function getHeadings$2() {
+				function getHeadings$7() {
 					return [{"depth":2,"slug":"interesting","text":"Interesting"}];
 				}
 				function getHeaders$2() {
 					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
-					return getHeadings$2();
-				}				async function Content$2() {
-					const { layout, ...content } = frontmatter$2;
-					content.file = file$2;
-					content.url = url$2;
+					return getHeadings$7();
+				}				async function Content$7() {
+					const { layout, ...content } = frontmatter$7;
+					content.file = file$7;
+					content.url = url$7;
 					content.astro = {};
 					Object.defineProperty(content.astro, 'headings', {
 						get() {
@@ -2624,29 +2618,643 @@ const html$2 = "<h2 id=\"interesting\">Interesting</h2>";
 					});
 					const contentFragment = createVNode(Fragment, { 'set:html': html$2 });
 					return createVNode($$BaseLayout, {
-									file: file$2,
-									url: url$2,
+									file: file$7,
+									url: url$7,
 									content,
 									frontmatter: content,
-									headings: getHeadings$2(),
-									rawContent: rawContent$2,
-									compiledContent: compiledContent$2,
+									headings: getHeadings$7(),
+									rawContent: rawContent$7,
+									compiledContent: compiledContent$7,
 									'server:root': true,
 									children: contentFragment
 								});
 				}
-				Content$2[Symbol.for('astro.needsHeadRendering')] = false;
+				Content$7[Symbol.for('astro.needsHeadRendering')] = false;
 
 const _page1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  _internal: _internal$2,
+  _internal: _internal$7,
+  frontmatter: frontmatter$7,
+  file: file$7,
+  url: url$7,
+  rawContent: rawContent$7,
+  compiledContent: compiledContent$7,
+  getHeadings: getHeadings$7,
+  getHeaders: getHeaders$2,
+  Content: Content$7,
+  default: Content$7
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const MDXLayout$4 = async function ({
+  children
+}) {
+  const Layout = (await Promise.resolve().then(() => BaseLayout)).default;
+  const {
+    layout,
+    ...content
+  } = frontmatter$6;
+  content.file = file$6;
+  content.url = url$6;
+  content.astro = {};
+  Object.defineProperty(content.astro, "headings", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."');
+    }
+  });
+  Object.defineProperty(content.astro, "html", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."');
+    }
+  });
+  Object.defineProperty(content.astro, "source", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."');
+    }
+  });
+  return createVNode(Layout, {
+    file: file$6,
+    url: url$6,
+    content,
+    frontmatter: content,
+    headings: getHeadings$6(),
+    "server:root": true,
+    children
+  });
+};
+const frontmatter$6 = {
+  "layout": "~/layouts/BaseLayout.astro",
+  "title": "Design a Beautiful EBook Cover or Product Mockup",
+  "source": "https://youtu.be/_XOWhA1dK7Y?t=64",
+  "canva-design": "https://www.canva.com/design/DAFU-LXFv7M/3iQ59ojzbVC0J7_E8GiAYA/edit"
+};
+const _internal$6 = {
+  injectedFrontmatter: {}
+};
+function getHeadings$6() {
+  return [{
+    "depth": 2,
+    "slug": "steps",
+    "text": "Steps"
+  }];
+}
+function _createMdxContent$4(props) {
+  const _components = Object.assign({
+    h2: "h2",
+    ul: "ul",
+    li: "li",
+    p: "p",
+    a: "a"
+  }, props.components);
+  return createVNode(Fragment, {
+    children: [createVNode(_components.h2, {
+      id: "steps",
+      children: "Steps"
+    }), "\n", createVNode(_components.ul, {
+      children: ["\n", createVNode(_components.li, {
+        children: "Create a Design"
+      }), "\n", createVNode(_components.li, {
+        children: "Click on \u2018eBook Cover\u2019"
+      }), "\n", createVNode(_components.li, {
+        children: "Select a design"
+      }), "\n", createVNode(_components.li, {
+        children: "Customize the design"
+      }), "\n", createVNode(_components.li, {
+        children: "Click on Share"
+      }), "\n"]
+    }), "\n", createVNode(_components.p, {
+      children: createVNode(_components.a, {
+        href: "https://www.canva.com/design/DAFU-LXFv7M/3iQ59ojzbVC0J7_E8GiAYA/edit",
+        children: "reference"
+      })
+    })]
+  });
+}
+function MDXContent$4(props = {}) {
+  return createVNode(MDXLayout$4, {
+    ...props,
+    children: createVNode(_createMdxContent$4, {
+      ...props
+    })
+  });
+}
+
+__astro_tag_component__(getHeadings$6, "astro:jsx");
+__astro_tag_component__(MDXContent$4, "astro:jsx");
+const url$6 = "/canva/ebook-cover-or-product-mockup";
+const file$6 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/canva/ebook-cover-or-product-mockup.mdx";
+function rawContent$6() { throw new Error("MDX does not support rawContent()! If you need to read the Markdown contents to calculate values (ex. reading time), we suggest injecting frontmatter via remark plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }function compiledContent$6() { throw new Error("MDX does not support compiledContent()! If you need to read the HTML contents to calculate values (ex. reading time), we suggest injecting frontmatter via rehype plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }const Content$6 = (props = {}) => MDXContent$4({
+											...props,
+											components: { Fragment, ...props.components },
+										});
+Content$6[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter$6.layout);
+
+const _page2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  frontmatter: frontmatter$6,
+  _internal: _internal$6,
+  getHeadings: getHeadings$6,
+  url: url$6,
+  file: file$6,
+  rawContent: rawContent$6,
+  compiledContent: compiledContent$6,
+  Content: Content$6,
+  default: Content$6
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const MDXLayout$3 = async function ({
+  children
+}) {
+  const Layout = (await Promise.resolve().then(() => BaseLayout)).default;
+  const {
+    layout,
+    ...content
+  } = frontmatter$5;
+  content.file = file$5;
+  content.url = url$5;
+  content.astro = {};
+  Object.defineProperty(content.astro, "headings", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."');
+    }
+  });
+  Object.defineProperty(content.astro, "html", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."');
+    }
+  });
+  Object.defineProperty(content.astro, "source", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."');
+    }
+  });
+  return createVNode(Layout, {
+    file: file$5,
+    url: url$5,
+    content,
+    frontmatter: content,
+    headings: getHeadings$5(),
+    "server:root": true,
+    children
+  });
+};
+const frontmatter$5 = {
+  "layout": "~/layouts/BaseLayout.astro",
+  "title": "Selecting Concealed Layers",
+  "source": "https://youtu.be/_XOWhA1dK7Y?t=31",
+  "canva-design": "https://www.canva.com/design/DAFU9yn2Y2I/SlykqkmP1ewJCtaD8wfmcA/edit"
+};
+const _internal$5 = {
+  injectedFrontmatter: {}
+};
+function getHeadings$5() {
+  return [{
+    "depth": 2,
+    "slug": "to-cycle-through-layered-elements",
+    "text": "To cycle through layered elements"
+  }, {
+    "depth": 2,
+    "slug": "to-move-the-layer-forward-or-backward",
+    "text": "To move the layer forward or backward"
+  }];
+}
+function _createMdxContent$3(props) {
+  const _components = Object.assign({
+    h2: "h2",
+    ul: "ul",
+    li: "li",
+    code: "code",
+    p: "p",
+    a: "a"
+  }, props.components);
+  return createVNode(Fragment, {
+    children: [createVNode(_components.h2, {
+      id: "to-cycle-through-layered-elements",
+      children: "To cycle through layered elements"
+    }), "\n", createVNode(_components.ul, {
+      children: ["\n", createVNode(_components.li, {
+        children: "Click on the foremost layer, then"
+      }), "\n", createVNode(_components.li, {
+        children: ["Hold down the ", createVNode(_components.code, {
+          children: "Command"
+        }), " key and click on left mouse button"]
+      }), "\n"]
+    }), "\n", createVNode(_components.h2, {
+      id: "to-move-the-layer-forward-or-backward",
+      children: "To move the layer forward or backward"
+    }), "\n", createVNode(_components.ul, {
+      children: ["\n", createVNode(_components.li, {
+        children: ["Click ", createVNode(_components.code, {
+          children: "command+]"
+        }), " to move the layer forward"]
+      }), "\n", createVNode(_components.li, {
+        children: ["Click ", createVNode(_components.code, {
+          children: "command+["
+        }), " to move the layer backward"]
+      }), "\n"]
+    }), "\n", createVNode(_components.p, {
+      children: createVNode(_components.a, {
+        href: "https://www.canva.com/design/DAFU9yn2Y2I/SlykqkmP1ewJCtaD8wfmcA/edit",
+        children: "reference"
+      })
+    })]
+  });
+}
+function MDXContent$3(props = {}) {
+  return createVNode(MDXLayout$3, {
+    ...props,
+    children: createVNode(_createMdxContent$3, {
+      ...props
+    })
+  });
+}
+
+__astro_tag_component__(getHeadings$5, "astro:jsx");
+__astro_tag_component__(MDXContent$3, "astro:jsx");
+const url$5 = "/canva/selecting-concealed-layers";
+const file$5 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/canva/selecting-concealed-layers.mdx";
+function rawContent$5() { throw new Error("MDX does not support rawContent()! If you need to read the Markdown contents to calculate values (ex. reading time), we suggest injecting frontmatter via remark plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }function compiledContent$5() { throw new Error("MDX does not support compiledContent()! If you need to read the HTML contents to calculate values (ex. reading time), we suggest injecting frontmatter via rehype plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }const Content$5 = (props = {}) => MDXContent$3({
+											...props,
+											components: { Fragment, ...props.components },
+										});
+Content$5[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter$5.layout);
+
+const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  frontmatter: frontmatter$5,
+  _internal: _internal$5,
+  getHeadings: getHeadings$5,
+  url: url$5,
+  file: file$5,
+  rawContent: rawContent$5,
+  compiledContent: compiledContent$5,
+  Content: Content$5,
+  default: Content$5
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const MDXLayout$2 = async function ({
+  children
+}) {
+  const Layout = (await Promise.resolve().then(() => BaseLayout)).default;
+  const {
+    layout,
+    ...content
+  } = frontmatter$4;
+  content.file = file$4;
+  content.url = url$4;
+  content.astro = {};
+  Object.defineProperty(content.astro, "headings", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."');
+    }
+  });
+  Object.defineProperty(content.astro, "html", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."');
+    }
+  });
+  Object.defineProperty(content.astro, "source", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."');
+    }
+  });
+  return createVNode(Layout, {
+    file: file$4,
+    url: url$4,
+    content,
+    frontmatter: content,
+    headings: getHeadings$4(),
+    "server:root": true,
+    children
+  });
+};
+const frontmatter$4 = {
+  "layout": "~/layouts/BaseLayout.astro",
+  "title": "Changing the design name",
+  "source": "Me",
+  "canva-design": "https://www.canva.com/design/DAFU-NRWu_I/Q5AWcxR3Zp-XbB0GJBLICg/edit"
+};
+const _internal$4 = {
+  injectedFrontmatter: {}
+};
+function getHeadings$4() {
+  return [{
+    "depth": 2,
+    "slug": "three-techniques",
+    "text": "Three techniques"
+  }];
+}
+function _createMdxContent$2(props) {
+  const _components = Object.assign({
+    h2: "h2",
+    p: "p",
+    ol: "ol",
+    li: "li"
+  }, props.components);
+  return createVNode(Fragment, {
+    children: [createVNode(_components.h2, {
+      id: "three-techniques",
+      children: "Three techniques"
+    }), "\n", createVNode(_components.p, {
+      children: "There are different ways to change the design name."
+    }), "\n", createVNode(_components.ol, {
+      children: ["\n", createVNode(_components.li, {
+        children: "Click the \u2018Edit\u2019 icon below the design thumbnail"
+      }), "\n"]
+    }), "\n", createVNode(_components.p, {
+      children: "Edit the design name"
+    }), "\n", createVNode(_components.ol, {
+      start: "2",
+      children: ["\n", createVNode(_components.li, {
+        children: "Click the \u2019\u2026\u2019 icon at top of the design thumbnail"
+      }), "\n"]
+    }), "\n", createVNode(_components.p, {
+      children: "Edit the design name"
+    }), "\n", createVNode(_components.ol, {
+      start: "3",
+      children: ["\n", createVNode(_components.li, {
+        children: "Click on the thumbnail to open design"
+      }), "\n"]
+    }), "\n", createVNode(_components.p, {
+      children: "Click on the design name in the top right area just to the left of your profile picture"
+    }), "\n", createVNode(_components.p, {
+      children: "Edit the design name"
+    })]
+  });
+}
+function MDXContent$2(props = {}) {
+  return createVNode(MDXLayout$2, {
+    ...props,
+    children: createVNode(_createMdxContent$2, {
+      ...props
+    })
+  });
+}
+
+__astro_tag_component__(getHeadings$4, "astro:jsx");
+__astro_tag_component__(MDXContent$2, "astro:jsx");
+const url$4 = "/canva/change-design-name";
+const file$4 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/canva/change-design-name.mdx";
+function rawContent$4() { throw new Error("MDX does not support rawContent()! If you need to read the Markdown contents to calculate values (ex. reading time), we suggest injecting frontmatter via remark plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }function compiledContent$4() { throw new Error("MDX does not support compiledContent()! If you need to read the HTML contents to calculate values (ex. reading time), we suggest injecting frontmatter via rehype plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }const Content$4 = (props = {}) => MDXContent$2({
+											...props,
+											components: { Fragment, ...props.components },
+										});
+Content$4[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter$4.layout);
+
+const _page4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  frontmatter: frontmatter$4,
+  _internal: _internal$4,
+  getHeadings: getHeadings$4,
+  url: url$4,
+  file: file$4,
+  rawContent: rawContent$4,
+  compiledContent: compiledContent$4,
+  Content: Content$4,
+  default: Content$4
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const MDXLayout$1 = async function ({
+  children
+}) {
+  const Layout = (await Promise.resolve().then(() => BaseLayout)).default;
+  const {
+    layout,
+    ...content
+  } = frontmatter$3;
+  content.file = file$3;
+  content.url = url$3;
+  content.astro = {};
+  Object.defineProperty(content.astro, "headings", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."');
+    }
+  });
+  Object.defineProperty(content.astro, "html", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."');
+    }
+  });
+  Object.defineProperty(content.astro, "source", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."');
+    }
+  });
+  return createVNode(Layout, {
+    file: file$3,
+    url: url$3,
+    content,
+    frontmatter: content,
+    headings: getHeadings$3(),
+    "server:root": true,
+    children
+  });
+};
+const frontmatter$3 = {
+  "layout": "~/layouts/BaseLayout.astro",
+  "title": "Shadow Effect",
+  "source": "https://youtu.be/_XOWhA1dK7Y?t=151",
+  "canva-design": "https://www.canva.com/design/DAFU-NRWu_I/Q5AWcxR3Zp-XbB0GJBLICg/edit"
+};
+const _internal$3 = {
+  injectedFrontmatter: {}
+};
+function getHeadings$3() {
+  return [{
+    "depth": 2,
+    "slug": "steps",
+    "text": "Steps"
+  }];
+}
+function _createMdxContent$1(props) {
+  const _components = Object.assign({
+    h2: "h2",
+    ul: "ul",
+    li: "li",
+    p: "p",
+    a: "a"
+  }, props.components);
+  return createVNode(Fragment, {
+    children: [createVNode(_components.h2, {
+      id: "steps",
+      children: "Steps"
+    }), "\n", createVNode(_components.ul, {
+      children: ["\n", createVNode(_components.li, {
+        children: "Select text"
+      }), "\n", createVNode(_components.li, {
+        children: "Click on \u2018Effects\u2019"
+      }), "\n", createVNode(_components.li, {
+        children: "Click on \u2018Shadow\u2019"
+      }), "\n", createVNode(_components.li, {
+        children: "Alter the settings to your liking"
+      }), "\n", createVNode(_components.li, {
+        children: "You may also want to try \u2018Lift\u2019 or one of the other effects"
+      }), "\n"]
+    }), "\n", createVNode(_components.p, {
+      children: createVNode(_components.a, {
+        href: "https://www.canva.com/design/DAFU-NRWu_I/Q5AWcxR3Zp-XbB0GJBLICg/edit",
+        children: "reference"
+      })
+    })]
+  });
+}
+function MDXContent$1(props = {}) {
+  return createVNode(MDXLayout$1, {
+    ...props,
+    children: createVNode(_createMdxContent$1, {
+      ...props
+    })
+  });
+}
+
+__astro_tag_component__(getHeadings$3, "astro:jsx");
+__astro_tag_component__(MDXContent$1, "astro:jsx");
+const url$3 = "/canva/shadow-effect";
+const file$3 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/canva/shadow-effect.mdx";
+function rawContent$3() { throw new Error("MDX does not support rawContent()! If you need to read the Markdown contents to calculate values (ex. reading time), we suggest injecting frontmatter via remark plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }function compiledContent$3() { throw new Error("MDX does not support compiledContent()! If you need to read the HTML contents to calculate values (ex. reading time), we suggest injecting frontmatter via rehype plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }const Content$3 = (props = {}) => MDXContent$1({
+											...props,
+											components: { Fragment, ...props.components },
+										});
+Content$3[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter$3.layout);
+
+const _page5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  frontmatter: frontmatter$3,
+  _internal: _internal$3,
+  getHeadings: getHeadings$3,
+  url: url$3,
+  file: file$3,
+  rawContent: rawContent$3,
+  compiledContent: compiledContent$3,
+  Content: Content$3,
+  default: Content$3
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const MDXLayout = async function ({
+  children
+}) {
+  const Layout = (await Promise.resolve().then(() => BaseLayout)).default;
+  const {
+    layout,
+    ...content
+  } = frontmatter$2;
+  content.file = file$2;
+  content.url = url$2;
+  content.astro = {};
+  Object.defineProperty(content.astro, "headings", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."');
+    }
+  });
+  Object.defineProperty(content.astro, "html", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."');
+    }
+  });
+  Object.defineProperty(content.astro, "source", {
+    get() {
+      throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."');
+    }
+  });
+  return createVNode(Layout, {
+    file: file$2,
+    url: url$2,
+    content,
+    frontmatter: content,
+    headings: getHeadings$2(),
+    "server:root": true,
+    children
+  });
+};
+const frontmatter$2 = {
+  "layout": "~/layouts/BaseLayout.astro",
+  "title": "Selecting Concealed Layers",
+  "source": "https://youtu.be/_XOWhA1dK7Y?t=31",
+  "canva-design": "https://www.canva.com/design/DAFU9yn2Y2I/SlykqkmP1ewJCtaD8wfmcA/edit"
+};
+const _internal$2 = {
+  injectedFrontmatter: {}
+};
+function getHeadings$2() {
+  return [{
+    "depth": 2,
+    "slug": "to-cycle-through-layered-elements",
+    "text": "To cycle through layered elements"
+  }, {
+    "depth": 2,
+    "slug": "to-move-the-layer-forward-or-backward",
+    "text": "To move the layer forward or backward"
+  }];
+}
+function _createMdxContent(props) {
+  const _components = Object.assign({
+    h2: "h2",
+    ul: "ul",
+    li: "li",
+    code: "code",
+    p: "p",
+    a: "a"
+  }, props.components);
+  return createVNode(Fragment, {
+    children: [createVNode(_components.h2, {
+      id: "to-cycle-through-layered-elements",
+      children: "To cycle through layered elements"
+    }), "\n", createVNode(_components.ul, {
+      children: ["\n", createVNode(_components.li, {
+        children: "Click on the foremost layer, then"
+      }), "\n", createVNode(_components.li, {
+        children: ["Hold down the ", createVNode(_components.code, {
+          children: "Command"
+        }), " key and click on left mouse button"]
+      }), "\n"]
+    }), "\n", createVNode(_components.h2, {
+      id: "to-move-the-layer-forward-or-backward",
+      children: "To move the layer forward or backward"
+    }), "\n", createVNode(_components.ul, {
+      children: ["\n", createVNode(_components.li, {
+        children: ["Click ", createVNode(_components.code, {
+          children: "command+]"
+        }), " to move the layer forward"]
+      }), "\n", createVNode(_components.li, {
+        children: ["Click ", createVNode(_components.code, {
+          children: "command+["
+        }), " to move the layer backward"]
+      }), "\n"]
+    }), "\n", createVNode(_components.p, {
+      children: createVNode(_components.a, {
+        href: "https://www.canva.com/design/DAFU9yn2Y2I/SlykqkmP1ewJCtaD8wfmcA/edit",
+        children: "reference"
+      })
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  return createVNode(MDXLayout, {
+    ...props,
+    children: createVNode(_createMdxContent, {
+      ...props
+    })
+  });
+}
+
+__astro_tag_component__(getHeadings$2, "astro:jsx");
+__astro_tag_component__(MDXContent, "astro:jsx");
+const url$2 = "/canva/a copy 2";
+const file$2 = "/Users/davidcruwys/dev/sites/flivideo.com/src/pages/canva/a copy 2.mdx";
+function rawContent$2() { throw new Error("MDX does not support rawContent()! If you need to read the Markdown contents to calculate values (ex. reading time), we suggest injecting frontmatter via remark plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }function compiledContent$2() { throw new Error("MDX does not support compiledContent()! If you need to read the HTML contents to calculate values (ex. reading time), we suggest injecting frontmatter via rehype plugins. Learn more on our docs: https://docs.astro.build/en/guides/integrations-guide/mdx/#inject-frontmatter-via-remark-or-rehype-plugins") }const Content$2 = (props = {}) => MDXContent({
+											...props,
+											components: { Fragment, ...props.components },
+										});
+Content$2[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter$2.layout);
+
+const _page6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
   frontmatter: frontmatter$2,
-  file: file$2,
+  _internal: _internal$2,
+  getHeadings: getHeadings$2,
   url: url$2,
+  file: file$2,
   rawContent: rawContent$2,
   compiledContent: compiledContent$2,
-  getHeadings: getHeadings$2,
-  getHeaders: getHeaders$2,
   Content: Content$2,
   default: Content$2
 }, Symbol.toStringTag, { value: 'Module' }));
@@ -2706,7 +3314,7 @@ const html$1 = "<h2 id=\"website-templatesexamples\">Website Templates/Examples<
 				}
 				Content$1[Symbol.for('astro.needsHeadRendering')] = false;
 
-const _page2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   _internal: _internal$1,
   frontmatter: frontmatter$1,
@@ -2960,7 +3568,7 @@ const html = "<div class=\"relative bg-indigo-800\">\n  <div class=\"absolute in
 				}
 				Content[Symbol.for('astro.needsHeadRendering')] = false;
 
-const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page8 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   _internal,
   frontmatter,
@@ -2974,7 +3582,7 @@ const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   default: Content
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const pageMap = new Map([['src/pages/index.mdx', _page0],['src/pages/canva/index.md', _page1],['src/pages/canva/gems/index.md', _page2],['src/pages/home.md', _page3],]);
+const pageMap = new Map([['src/pages/index.mdx', _page0],['src/pages/canva/index.md', _page1],['src/pages/canva/ebook-cover-or-product-mockup.mdx', _page2],['src/pages/canva/selecting-concealed-layers.mdx', _page3],['src/pages/canva/change-design-name.mdx', _page4],['src/pages/canva/shadow-effect.mdx', _page5],['src/pages/canva/a copy 2.mdx', _page6],['src/pages/canva/gems/index.md', _page7],['src/pages/home.md', _page8],]);
 const renderers = [Object.assign({"name":"astro:jsx","serverEntrypoint":"astro/jsx/server.js","jsxImportSource":"astro"}, { ssr: server_default }),];
 
 if (typeof process !== "undefined") {
@@ -3051,7 +3659,7 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.mdx","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/canva","type":"page","pattern":"^\\/canva\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/index.md","pathname":"/canva","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/canva/gems","type":"page","pattern":"^\\/canva\\/gems\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}],[{"content":"gems","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/gems/index.md","pathname":"/canva/gems","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/home","type":"page","pattern":"^\\/home\\/?$","segments":[[{"content":"home","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/home.md","pathname":"/home","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","astro:scripts/before-hydration.js":""},"assets":["/assets/index.f983fcfa.css","/favicon.svg","/fonts/Inter-italic.var.woff2","/fonts/Inter-roman.var.woff2","/fonts/lexend.txt","/fonts/lexend.woff2","/images/david.png","/images/logo-fli-video-icon.png","/images/logo-fli-video-icon.svg","/images/logo-fli-video-tagline.png","/images/logo-fli-video-tagline.svg","/images/logo-fli-video.png","/images/logo-fli-video.svg"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.mdx","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/canva","type":"page","pattern":"^\\/canva\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/index.md","pathname":"/canva","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/canva/ebook-cover-or-product-mockup","type":"page","pattern":"^\\/canva\\/ebook-cover-or-product-mockup\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}],[{"content":"ebook-cover-or-product-mockup","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/ebook-cover-or-product-mockup.mdx","pathname":"/canva/ebook-cover-or-product-mockup","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/canva/selecting-concealed-layers","type":"page","pattern":"^\\/canva\\/selecting-concealed-layers\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}],[{"content":"selecting-concealed-layers","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/selecting-concealed-layers.mdx","pathname":"/canva/selecting-concealed-layers","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/canva/change-design-name","type":"page","pattern":"^\\/canva\\/change-design-name\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}],[{"content":"change-design-name","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/change-design-name.mdx","pathname":"/canva/change-design-name","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/canva/shadow-effect","type":"page","pattern":"^\\/canva\\/shadow-effect\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}],[{"content":"shadow-effect","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/shadow-effect.mdx","pathname":"/canva/shadow-effect","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/canva/a copy 2","type":"page","pattern":"^\\/canva\\/a copy 2\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}],[{"content":"a copy 2","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/a copy 2.mdx","pathname":"/canva/a copy 2","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/canva/gems","type":"page","pattern":"^\\/canva\\/gems\\/?$","segments":[[{"content":"canva","dynamic":false,"spread":false}],[{"content":"gems","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/canva/gems/index.md","pathname":"/canva/gems","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/index.f983fcfa.css"],"scripts":[],"routeData":{"route":"/home","type":"page","pattern":"^\\/home\\/?$","segments":[[{"content":"home","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/home.md","pathname":"/home","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","astro:scripts/before-hydration.js":""},"assets":["/assets/index.f983fcfa.css","/favicon.svg","/fonts/Inter-italic.var.woff2","/fonts/Inter-roman.var.woff2","/fonts/lexend.txt","/fonts/lexend.woff2","/images/david.png","/images/logo-fli-video-icon.png","/images/logo-fli-video-icon.svg","/images/logo-fli-video-tagline.png","/images/logo-fli-video-tagline.svg","/images/logo-fli-video.png","/images/logo-fli-video.svg"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });

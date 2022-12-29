@@ -5,13 +5,21 @@
   },
   "sections": [
     {
-      "title": "Snippets",
+      "title": "Tips and Tricks",
       "links": [
-        { "title": "Iterate Multi-Dimensional Arrays", "href": "/ruby/select-multi-dimensional-array" },
-        { "title": "Referencing Relative Files", "href": "/ruby/reference-relative-folder"},
-        { "title": "JSON Serialize/Deserialize", "href": "/ruby/json-serialization-deserialization-techniques"},
-        { "title": "Exclude RSpec test in Production", "href": "/ruby/exclude-rspec-test-production"},
-        { "title": "Pretty Call Stack", "href": "/ruby/pretty-call-stack"}
+        { "title": "Selecting Concealed Layers", "href": "/canva/selecting-concealed-layers" },
+        { "title": "EBook Cover or Product Mockup", "href": "/canva/ebook-cover-or-product-mockup"},
+        { "title": "Shadow Effect", "href": "/canva/shadow-effect"},
+        { "title": "Change the design name", "href": "/canva/change-design-name"},
+        { "title": "", "href": "/canva/"},
+        { "title": "", "href": "/canva/"},
+        { "title": "", "href": "/canva/"},
+        { "title": "", "href": "/canva/"},
+        { "title": "", "href": "/canva/"},
+        { "title": "", "href": "/canva/"},
+        { "title": "", "href": "/canva/"},
+        { "title": "", "href": "/canva/"},
+        { "title": "", "href": "/canva/"}
       ]
     }
   ]
