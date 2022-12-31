@@ -1,6 +1,7 @@
 import path from 'node:path';
 import fsp from 'node:fs/promises';
 import fs from 'node:fs';
+import { fileURLToPath } from 'url'
 
 const DEFAULT_NAVIGATION = {
   sections: [
@@ -84,6 +85,15 @@ export function pageSubpath(file: string): string {
 }
 
 export function basePagePath(): string {
+  console.log('david')
+  const result = new URL('../pages/', import.meta.url).pathname
+
+  console.log('basePagePath            :', result);
+  console.log(result === '/Users/davidcruwys/dev/sites/flivideo.com/src/pages/' ? "GOOD" : "******* BAD *******");
+
+  const __dirname = fileURLToPath(new URL('../pages/', import.meta.url))
+  console.log('dirname                 :', __dirname)
+
   return new URL('../pages/', import.meta.url).pathname
 
   // const result = new URL('../pages/', import.meta.url).pathname;
