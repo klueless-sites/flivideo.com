@@ -85,7 +85,13 @@ export function pageSubpath(file: string): string {
 }
 
 export function basePagePath(): string {
-  console.log('david')
+  console.log('david1')
+  console.log(import.meta.url)
+  console.log('david2')
+  console.log(new URL('../pages/', import.meta.url))
+  console.log('david3')
+  console.log(new URL('../pages/', import.meta.url).pathname)
+  console.log('david4')
   const result = new URL('../pages/', import.meta.url).pathname
 
   console.log('basePagePath            :', result);
