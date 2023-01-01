@@ -1,7 +1,6 @@
 import path from 'node:path';
 import fsp from 'node:fs/promises';
 import fs from 'node:fs';
-import { fileURLToPath } from 'url'
 
 const DEFAULT_NAVIGATION = {
   sections: [
@@ -85,20 +84,17 @@ export function pageSubpath(file: string): string {
 }
 
 export function basePagePath(): string {
-  console.log('david1')
-  console.log(import.meta.url)
-  console.log('david2')
-  console.log(new URL('../pages/', import.meta.url))
-  console.log('david3')
-  console.log(new URL('../pages/', import.meta.url).pathname)
-  console.log('david4')
+  // Works on development, but fails on Netlify
+  // console.log(Astro.url) // undefined
+  // console.log(import.meta.url) // undefined
   const result = new URL('../pages/', import.meta.url).pathname
 
+  console.log('import.meta.url         :', import.meta.url);
   console.log('basePagePath            :', result);
-  console.log(result === '/Users/davidcruwys/dev/sites/flivideo.com/src/pages/' ? "GOOD" : "******* BAD *******");
+  // console.log(result === '/Users/davidcruwys/dev/sites/flivideo.com/src/pages/' ? "GOOD" : "******* BAD *******");
 
-  const __dirname = fileURLToPath(new URL('../pages/', import.meta.url))
-  console.log('dirname                 :', __dirname)
+  // const __dirname = fileURLToPath(new URL('../pages/', import.meta.url))
+  // console.log('dirname                 :', __dirname)
 
   return new URL('../pages/', import.meta.url).pathname
 

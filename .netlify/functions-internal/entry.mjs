@@ -2000,6 +2000,9 @@ function pageSubpath(file) {
   return path.dirname(file).substring(basePagePath().length);
 }
 function basePagePath() {
+  const result = new URL("../pages/", import.meta.url).pathname;
+  console.log("import.meta.url         :", import.meta.url);
+  console.log("basePagePath            :", result);
   return new URL("../pages/", import.meta.url).pathname;
 }
 
