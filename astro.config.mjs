@@ -12,7 +12,7 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), mdx()]
+  }), mdx()],
 });
 
 // output: "server",
