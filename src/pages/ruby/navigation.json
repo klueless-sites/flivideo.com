@@ -1,0 +1,18 @@
+{
+  "topic": {
+    "title": "Ruby Gems",
+    "tags": ["ruby"]
+  },
+  "sections": [
+    {
+      "title": "Snippets",
+      "links": [
+        { "title": "Iterate Multi-Dimensional Arrays", "href": "/ruby/select-multi-dimensional-array" },
+        { "title": "Referencing Relative Files", "href": "/ruby/reference-relative-folder"},
+        { "title": "JSON Serialize/Deserialize", "href": "/ruby/json-serialization-deserialization-techniques"},
+        { "title": "Exclude RSpec test in Production", "href": "/ruby/exclude-rspec-test-production"},
+        { "title": "Pretty Call Stack", "href": "/ruby/pretty-call-stack"}
+      ]
+    }
+  ]
+}

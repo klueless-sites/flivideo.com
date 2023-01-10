@@ -17,12 +17,56 @@ const QUICK_NAVIGATION = {
       title: 'Quick Links',
       links: [
         {
-          title: 'Canva (Tips, Tricks, Tutorials)',
-          href: '/canva'
+          title: 'Sitemap (debug)',
+          href: '/sitemap'
         },
         {
-          title: 'Camtasia (Tips, Tricks, Tutorials)',
-          href: '/camtasia'
+          title: 'Ruby GEMs',
+          href: '/ruby/gems'
+        },
+        {
+          title: 'astrojs',
+          href: '/astrojs'
+        },
+        {
+          title: 'Javascript',
+          href: '/javascript'
+        },
+        {
+          title: 'Ideas',
+          href: '/ideas'
+        },
+        {
+          title: 'Peers',
+          href: '/peers'
+        },
+        {
+          title: 'Tools',
+          href: '/tools'
+        },
+        {
+          title: 'Git',
+          href: '/git'
+        },
+        {
+          title: 'Tailwind',
+          href: '/tailwind'
+        },
+        {
+          title: 'LoCode/NoCode',
+          href: '/locode'
+        },
+        {
+          title: 'Open AI',
+          href: '/openai'
+        },
+        {
+          title: 'Docker',
+          href: '/docker'
+        },
+        {
+          title: 'New Home',
+          href: '/home'
         }
       ]
     }
@@ -88,28 +132,19 @@ export function pageSubpath(file: string): string {
 }
 
 export function basePagePath(): string {
-  // Works on development, but fails on Netlify
-  // console.log(Astro.url) // undefined
-  // console.log(import.meta.url) // undefined
-  const result = new URL('../pages/', import.meta.url).pathname
-
-  console.log('import.meta.url         :', import.meta.url);
-  console.log('basePagePath            :', result);
-  // console.log(result === '/Users/davidcruwys/dev/sites/flivideo.com/src/pages/' ? "GOOD" : "******* BAD *******");
-
-  // const __dirname = fileURLToPath(new URL('../pages/', import.meta.url))
-  // console.log('dirname                 :', __dirname)
-
+  console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
+  console.log(new URL('../pages/', import.meta.url).pathname)
   return new URL('../pages/', import.meta.url).pathname
-
+  // return '/Users/davidcruwys/dev/sites/appydave-v2.com/src/pages/';
   // const result = new URL('../pages/', import.meta.url).pathname;
+  // const result = '/Users/davidcruwys/dev/sites/appydave-v2.com/src/pages/';
 
   // console.log('basePagePath            :', result);
-  // console.log(result === '/Users/davidcruwys/dev/sites/flivideo.com/src/pages/' ? "GOOD" : "******* BAD *******");
-  // if (result !== '/Users/davidcruwys/dev/sites/flivideo.com/src/pages/') {
+  // console.log(result === '/Users/davidcruwys/dev/sites/appydave-v2.com/src/pages/' ? "GOOD" : "******* BAD *******");
+  // if (result !== '/Users/davidcruwys/dev/sites/appydave-v2.com/src/pages/') {
   //   console.log("******* BAD *******1");
   //   console.log(result);
-  //   console.log('/Users/davidcruwys/dev/sites/flivideo.com/src/pages/');
+  //   console.log('/Users/davidcruwys/dev/sites/appydave-v2.com/src/pages/');
   //   console.log("******* BAD *******2");
   // }
   // return result;

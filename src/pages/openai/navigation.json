@@ -1,0 +1,17 @@
+{
+  "topic": {
+    "title": "Open AI",
+    "tags": ["openai", "dalle", "gpt3", "whisper"]
+  },
+  "sections": [
+    {
+      "title": "Introduction",
+      "links": [
+        { "title": "Open AI", "href": "/openai" },
+        { "title": "GPT 3", "href": "/openai/gpt3" },
+        { "title": "DALL·E 2", "href": "/openai/dall-e2" },
+        { "title": "Whisper", "href": "/openai/whisper" }
+      ]
+    }
+  ]
+}

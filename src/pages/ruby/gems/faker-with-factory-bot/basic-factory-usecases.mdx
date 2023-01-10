@@ -1,0 +1,54 @@
+---
+layout: ~/layouts/BaseLayout.astro
+title: Pros/Cons for Factories by Example
+---
+
+import Benefits from "~/components/factory-bot/Benefits.astro"
+import Benefit from "~/components/factory-bot/Benefit.astro"
+import Useful from "~/components/factory-bot/Useful.astro"
+
+## Overview
+
+The following FactoryBot and Faker examples are for various data generation scenarios. Each scenario is listed with with a Pros and Cons.
+
+
+
+### Unit test data
+
+Data required for various test cases. This data just needs to meet the minimum requirement for a unit test.
+
+## XXXX
+
+## YYYY
+
+### Seed data
+
+Seed data when an environment is create, example: application setup there needs to an admin user and a bunch of pre-defined settings.
+
+### Sample data
+
+Sample data is often a larger dataset with realistic examples for use in development, UAT or demo environments.
+
+#### Pros/Cons legend
+
+- <Useful /> - Good pattern for the usecase
+- <Useful answer="no" /> - Not the best pattern for this usecase
+- <Useful answer="maybe" /> - Ambivalent, this neither good nor bad, but there is generally a better usecase.
+
+### Static attribute values
+
+Static data on factory attributes can be useful for any type of data generation
+
+```ruby
+FactoryBot.define do
+  factory :user do
+    first_name { "John" }
+    last_name  { "Doe" }
+    admin { false }
+  end
+end
+```
+
+<Benefits>
+  <Benefit label='Static data on factory attributes	' a='yes' b='yes' c='maybe' />
+</Benefits>

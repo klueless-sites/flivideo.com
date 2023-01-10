@@ -1,0 +1,14 @@
+{
+  "topic": {
+    "title": "Docker",
+    "tags": ["docker", "docker-compose"]
+  },
+  "sections": [
+    {
+      "title": "Introduction",
+      "links": [
+        { "title": "Dockerize Postgres", "href": "/docker" }
+      ]
+    }
+  ]
+}

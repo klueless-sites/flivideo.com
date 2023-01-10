@@ -1,0 +1,11 @@
+{
+  "sections": [
+    {
+      "title": "Introduction",
+      "links": [
+        { "title": "Getting started", "href": "/" },
+        { "title": "Faker and Factory Bot", "href": "/faker-with-factory-bot" }
+      ]
+    }
+  ]
+}

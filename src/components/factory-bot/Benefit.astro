@@ -1,0 +1,25 @@
+---
+import Useful from './Useful.astro';
+
+export interface Props {
+  label?: string;
+  a?: string;
+  b?: string;
+  c?: string;
+}
+
+const { 
+  label = '',
+  a = 'na',
+  b = 'na',
+  c = 'na',
+
+ } = Astro.props as Props;
+---
+
+<tr>
+  <td>{label}</td>
+  <td><Useful answer={a} /></td>
+  <td><Useful answer={b} /></td>
+  <td><Useful answer={c} /></td>
+</tr>

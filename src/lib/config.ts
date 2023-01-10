@@ -1,6 +1,6 @@
 export const SITE = {
-  title: 'FliVideo',
-  description: 'Automate your video influence',
+  title: 'AppyDave',
+  description: 'Software Architect, Fullstack / Micro App Developer and Dancer',
   defaultLanguage: 'en_US',
   font_awesome: false,
   site_map: false,

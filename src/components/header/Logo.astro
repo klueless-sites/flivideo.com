@@ -1,5 +1,12 @@
 ---
+import LogoIconPaths from './LogoIconPaths.astro';
+import LogoNamePaths from './LogoNamePaths.astro';
+
 const { ...props } = Astro.props;
 ---
 
-<img src="/images/logo-fli-video.svg" alt="Logo" {...props} />
+<svg aria-hidden="true" viewBox="0 0 227 36" fill="none" {...props}>
+  <LogoIconPaths />
+  <LogoNamePaths />
+</svg>
+

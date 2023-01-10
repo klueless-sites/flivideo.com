@@ -1,0 +1,17 @@
+{
+  "topic": {
+    "title": "My Ideas",
+    "tags": ["ideasmen"]
+  },
+  "sections": [
+    {
+      "title": "Overview",
+      "links": [
+        { "title": "Ideas", "href": "/ideas" },
+        { "title": "My Sites", "href": "/ideas/my-sites" },
+        { "title": "Youtube Plan", "href": "/ideas/youtube-plan" },
+        { "title": "Tutorial a Day", "href": "/ideas/tutorial-a-day" }
+      ]
+    }
+  ]
+}

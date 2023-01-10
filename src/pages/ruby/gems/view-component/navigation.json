@@ -1,0 +1,14 @@
+{
+  "topic": {
+    "title": "View Component",
+    "tags": ["ruby", "ruby/gems", "view_component"]
+  },
+  "sections": [
+    {
+      "title": "Introduction",
+      "links": [
+        { "title": "View Component", "href": "/ruby/gems/view-component" }
+      ]
+    }
+  ]
+}
