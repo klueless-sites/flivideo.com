@@ -1,0 +1,16 @@
+{
+  "topic": {
+    "title": "Ruby Gems",
+    "tags": ["ruby"]
+  },
+  "sections": [
+    {
+      "title": "Camtasia tips and tricks",
+      "links": [
+        { "title": "Crop video", "href": "/camtasia/crop-video" },
+        { "title": "Scaling", "href": "/camtasia/video-canvas-size"},
+        { "title": "Zoom to focus", "href": "/camtasia/zoom-to-focus" }
+      ]
+    }
+  ]
+}

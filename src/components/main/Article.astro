@@ -8,12 +8,12 @@ export interface Props {
   title?: string;
 }
 
-const { section = 'xmen are cool', title = "It's good to be the king" } = Astro.props as Props;
+const { section = 'Canva tips and tricks', title = "It's good to be the king" } = Astro.props as Props;
 
 ---
 <article>
   <header class="mb-9 space-y-1">
-    {section && (<ArticleSection section='{section}' />)}
+    {section && (<ArticleSection section={section} />)}
     {title && (<ArticleTitle title={title} />)}
   </header>
   <Prose>
