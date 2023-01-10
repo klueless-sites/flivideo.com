@@ -19,6 +19,10 @@ const QUICK_NAVIGATION = {
         {
           title: 'Canva (Tips, Tricks, Tutorials)',
           href: '/canva'
+        },
+        {
+          title: 'Camtasia (Tips, Tricks, Tutorials)',
+          href: '/camtasia'
         }
       ]
     }
