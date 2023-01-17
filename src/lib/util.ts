@@ -23,6 +23,10 @@ const QUICK_NAVIGATION = {
         {
           title: 'Camtasia (Tips, Tricks, Tutorials)',
           href: '/camtasia'
+        },
+        {
+          title: 'Davinci Resolve (Tips, Tricks, Tutorials)',
+          href: '/davinci-resolve'
         }
         // {
         //   title: 'New Home',

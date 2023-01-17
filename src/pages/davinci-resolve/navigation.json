@@ -1,0 +1,15 @@
+{
+  "topic": {
+    "title": "Ruby Gems",
+    "tags": ["ruby"]
+  },
+  "sections": [
+    {
+      "title": "Davinci Resolve",
+      "links": [
+        { "title": "Overview + Shortcuts", "href": "/davinci-resolve" },
+        { "title": "xxx", "href": "/davinci-resolve/xxx"}
+      ]
+    }
+  ]
+}
